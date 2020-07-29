@@ -1,6 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
 body {
+  height: 100%;
+  width: 100%;
   margin:0;
   padding:0;
   background-color: #d3d3d3;
@@ -9,20 +11,20 @@ body {
 }
 
 .main {
-  height: 1000px;
-  width: 1000px;
+  height: 100%;
+  width: 100%;
 }
 
 #column-1 {
   background-color: red;
   float: left;
-  height: 1000px;
+  height: 100vh;
   width: 300px;
 }
 
 #column-2 {
   background-color: white;
-  height: 1000px;
+  height: 100vh;
   width: 754px;
   margin: 0 auto;
   float: left;
@@ -31,7 +33,7 @@ body {
 #column-3 {
   background-color: black;
   color: white;
-  height: 1000px;
+  height: 100vh;
   width: 300px;
   float: right;
 }
