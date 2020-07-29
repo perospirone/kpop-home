@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
 body {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   margin:0;
   padding:0;
@@ -10,30 +10,31 @@ body {
   text-align: center;
 }
 
-.main {
-  height: 100%;
+main {
+  height: 1280px;
   width: 100%;
+  background-color: #708090;
+}
+
+header {
+  width: 100%;
+  height: 56px;
+  margin-bottom: 20px;
+  background-color: #78866b;
+  padding: 10px
+}
+
+.search-box {
+
 }
 
 #column-1 {
   background-color: red;
-  float: left;
-  height: 100vh;
-  width: 300px;
 }
-
 #column-2 {
   background-color: white;
-  height: 100vh;
-  width: 754px;
-  margin: 0 auto;
-  float: left;
 }
 
 #column-3 {
   background-color: black;
-  color: white;
-  height: 100vh;
-  width: 300px;
-  float: right;
 }
