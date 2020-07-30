@@ -14,8 +14,12 @@ main {
 }
 
 header {
-  display: flex;
   background-color: red;
+  height: 56px;
+}
+
+.top-bar-container {
+  display: flex;
   height: 56px;
   align-items: center
 

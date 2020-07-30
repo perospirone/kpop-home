@@ -10,23 +10,26 @@
 <body>
 
 		<header>
-			
-			<div class="logo">
-				Casa das Kpopers
-			</div>
+			<div class="top-bar-container">
 
-			<div class="search-box">
-				<form class="" action="#" method="get">
-					<input type="text" name="" value="" placeholder="Pesquisar">
-				</form>
-			</div>
+				<div class="logo">
+					Casa das Kpopers
+				</div>
 
-			<div class="top-right">
-				<a class="write-post" href="#"></a>
+				<div class="search-box">
+					<form class="" action="#" method="get">
+						<input type="text" name="" value="" placeholder="Pesquisar">
+					</form>
+				</div>
 
-				<a class="notifications" href="#"></a>
+				<div class="top-right">
+					<a class="write-post" href="#"></a>
 
-				<div class="menu">
+					<a class="notifications" href="#"></a>
+
+					<div class="menu">
+
+					</div>
 
 				</div>
 
