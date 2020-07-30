@@ -34,4 +34,26 @@ header {
   width: 420px
   height: 40px;
   margin-left: 20px;
+  margin-right: 20px;
 }
+
+.top-right {
+  display: flex;
+  width: 260px;
+  height: 56px;
+  background-color: white;
+  margin-left: 800px;
+
+}
+
+/* .top-right .write-post {
+
+}
+
+.top-right .notification {
+
+}
+
+.top-right .menu {
+
+} */

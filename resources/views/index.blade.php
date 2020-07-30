@@ -10,6 +10,7 @@
 <body>
 
 		<header>
+			
 			<div class="logo">
 				Casa das Kpopers
 			</div>
@@ -19,6 +20,18 @@
 					<input type="text" name="" value="" placeholder="Pesquisar">
 				</form>
 			</div>
+
+			<div class="top-right">
+				<a class="write-post" href="#"></a>
+
+				<a class="notifications" href="#"></a>
+
+				<div class="menu">
+
+				</div>
+
+			</div>
+
 		</header>
 
 
