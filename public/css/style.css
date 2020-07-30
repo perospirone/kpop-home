@@ -8,12 +8,8 @@ body {
   font-family: 'Roboto', 'Nunito', sans-serif;
 }
 
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
 header {
+  width: 100%;
   background-color: red;
   height: 56px;
 }
@@ -21,17 +17,19 @@ header {
 .top-bar-container {
   display: flex;
   height: 56px;
-  align-items: center
-
+  align-items: center;
   /* padding: 5px; */
   /* justify-content: flex-start; */
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .logo {
   height: 25px;
   width: 131px;
   text-align: center;
-  margin-left: 15px;
+  /* margin-left: 15px; */
+  margin-left:
 }
 
 .search-box {
@@ -46,18 +44,36 @@ header {
   width: 260px;
   height: 56px;
   background-color: white;
-  margin-left: 800px;
+  margin-left: 750px;
+  align-items: center;
+  padding: 4px;
+}
+
+.top-right .write-post {
+
 
 }
 
-/* .top-right .write-post {
+.top-right .notifications {
+  margin-left: 10px;
+  color: gray;
+  height: 24px;
+  text-align: center;
 
 }
 
-.top-right .notification {
-
+.top-right .notifications span {
+  font-size: 24px;
 }
 
 .top-right .menu {
 
-} */
+}
+
+.top-right .menu a {
+  font-size: 24px;
+  color: gray;
+  height: 24px;
+  text-align: center;
+  margin-left: 10px;
+}
