@@ -1,79 +1,106 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css2?family=Roboto');
 
-body {
+.mainContainer {
   margin: 0;
   padding: 0;
-  background-color: #d3d3d3;
+  background-color: #eef0f1;
   font-family: 'Roboto', 'Nunito', sans-serif;
+  height: 100vh;
 }
 
 header {
   width: 100%;
-  background-color: red;
-  height: 56px;
+  border-bottom: 1px solid #c5c5c5;
+  background-color: white;
 }
 
 .top-bar-container {
   display: flex;
   height: 56px;
-  align-items: center;
-  /* padding: 5px; */
-  /* justify-content: flex-start; */
-  margin-left: 40px;
-  margin-right: 40px;
+  justify-content: space-between;
 }
 
 .logo {
-  height: 25px;
-  width: 131px;
-  text-align: center;
-  /* margin-left: 15px; */
-  margin-left:
+  display: inline-block;
+  margin: 10px;
 }
 
 .search-box {
-  width: 420px
+  display: inline-block;
+}
+
+.search-box input {
+  width: 400px;
+  padding: 5px;
   height: 40px;
-  margin-left: 20px;
-  margin-right: 20px;
+  border: 1px solid #d3d3d3;
+  color: #3b3b3b;
+  border-radius: 5px;
 }
 
-.top-right {
+.maxWidth{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flexDiv {
   display: flex;
-  width: 260px;
-  height: 56px;
-  background-color: white;
-  margin-left: 750px;
   align-items: center;
-  padding: 4px;
 }
 
-.top-right .write-post {
+.top-right{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
-
+	flex-basis: 200px;
 }
 
-.top-right .notifications {
-  margin-left: 10px;
-  color: gray;
-  height: 24px;
-  text-align: center;
-
+.top-right .iconButton,
+.top-right .iconButton:visited {
+  color: #707070;
 }
 
-.top-right .notifications span {
-  font-size: 24px;
+.top-right .iconButton:hover {
+  color: #383838;
 }
 
-.top-right .menu {
-
+.top-right .iconButton i{
+  font-size: 16pt;
 }
 
-.top-right .menu a {
-  font-size: 24px;
-  color: gray;
-  height: 24px;
-  text-align: center;
-  margin-left: 10px;
+/** mainFlex */
+
+.mainFlex {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mainFlex > div {
+  /* border: 1px solid black; */
+}
+
+.box {
+  border-radius: 5px;
+  background-color: white;
+  padding:5px;
+}
+
+.column1 {
+  /* flex-basis: 200px; */
+  flex-grow: 0;
+}
+
+.column2 {
+  flex-basis: 600px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.column1 {
+  /* flex-basis: 200px; */
+  flex-grow: 0;
 }
