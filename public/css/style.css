@@ -141,3 +141,38 @@ header {
   text-decoration: none;
   background: #e2e4e5;
 }
+
+.column2 {
+  background: #eef0f1;
+}
+
+.column2 header {
+  background: #eef0f1;
+  display: flex;
+  justify-content: space-between;
+  border: 0;
+}
+
+.column2 h2 {
+  color: rgb(8, 9, 10);
+  font-size: 18px;
+}
+
+.feed {
+  border-bottom: red;
+}
+
+.column2 a {
+  text-decoration: none;
+  padding: 8px;
+  font-size: 16px;
+  text-align: center;
+  color: rgb(54, 61, 68);
+  margin: 0 4px;
+}
+
+.column2 a:hover {
+  text-decoration: none;
+  color: #3b49df;
+  background: #e2e4e5;
+}
