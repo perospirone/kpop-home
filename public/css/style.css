@@ -92,6 +92,8 @@ header {
 .column1 {
   /* flex-basis: 200px; */
   flex-grow: 0;
+  background: #eef0f1;
+
 }
 
 .column2 {
@@ -100,7 +102,42 @@ header {
   flex-shrink: 0;
 }
 
-.column1 {
-  /* flex-basis: 200px; */
-  flex-grow: 0;
+.vertical-menu {
+  width: 200px; /* Set a width if you like */
+  background: #eef0f1;
+}
+
+.vertical-menu a {
+  font-size: 16px;
+  color: #202428;
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  text-decoration: none;
+  background: #e2e4e5;
+}
+
+.separador {
+  font-size: 12px;
+  color: rgb(125, 138, 151);
+  display: block;
+  background: #eef0f1;
+  border: 0;
+  padding: 8px;
+}
+
+.vertical-menu2 a {
+  font-size: 16px;
+  color: #202428;
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+}
+
+.vertical-menu2 a:hover {
+  text-decoration: none;
+  background: #e2e4e5;
 }
