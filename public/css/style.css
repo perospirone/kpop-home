@@ -159,7 +159,11 @@ header {
 }
 
 .feed {
-  border-bottom: red;
+  border-bottom: 3px solid #1827ce;
+}
+
+.feed {
+  border-bottom-width: 100%;
 }
 
 .column2 a {
