@@ -157,14 +157,22 @@ header {
   color: rgb(8, 9, 10);
   font-size: 18px;
 }
-
+/*
 .feed {
   border-bottom: 3px solid #1827ce;
 }
 
+.feed:hover {
+  border-bottom-width: 2px;
+}*/
+/*
 .feed {
-  border-bottom-width: 100%;
-}
+  text-decoration: underline;
+  text-decoration-line: overline;
+  text-decoration-color: rgb(8, 9, 10);
+  text-decoration-style: solid;
+  text-decoration-line: 
+}*/
 
 .column2 a {
   text-decoration: none;
@@ -179,4 +187,145 @@ header {
   text-decoration: none;
   color: #3b49df;
   background: #e2e4e5;
+}
+
+.posts {
+  width: 100%;
+  height: 100%;
+}
+/*
+.post {
+  width: 100%;
+  height: 500px;
+}
+
+.post img {
+  width: 100%;
+  height: 200px;
+}
+
+.post .details-post {
+  width: 100%;
+  height: 100%;
+}*/
+
+.post {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 500px;
+}
+
+.post img {
+  width: 100%;
+  height: 200px;
+}
+
+.post .details-post {
+  flex-grow: 1;
+  padding: 16px;
+  background: white;
+}
+
+
+.post .details-post .autor-post {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.post .details-post .autor-post .name {
+  font-size: 14px;
+  color: rgb(77, 87, 96);
+}
+
+.post .details-post .autor-post .name:hover {
+  background: 0;
+  color: rgb(8, 9, 10);
+} 
+
+.post .details-post .autor-post .date {
+  font-size: 12px;
+  color: rgb(100, 112, 125);
+}
+
+.post .details-post .autor-post .date:hover {
+  background: 0;
+  color: rgb(8, 9, 10);
+}
+
+.post .details-post .title-post {
+  padding-left: 20px;
+}
+
+.post .details-post .title-post h2 {
+  margin-bottom: 8px;
+}
+
+.post .details-post .title-post h2 a {
+  color: rgb(8, 9, 10);
+  font-size: 30px;
+  padding: 0;
+}
+
+.post .details-post .title-post .hashtag {
+  margin-bottom: 8px;
+}
+
+.post .details-post .title-post .hashtag a {
+  padding: 4px;
+  color: rgb(77, 87, 96);
+  font-size: 14px;
+  margin: 0;
+}
+
+.post .details-post .title-post .reactions {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.post .details-post .title-post .reactions .react .like {
+  padding-top: 4px;
+  padding-left: 8px;
+  padding-bottom: 4px;
+  padding-right: 12px;
+  font-size: 14px;
+  color: rgb(54, 61, 68);
+}
+
+.post .details-post .title-post .reactions .react .like i {
+  margin-right: 4px;
+  width: 24px;
+  height: 24px;
+}
+
+.post .details-post .title-post .reactions .react .comment {
+  padding-top: 4px;
+  padding-left: 8px;
+  padding-bottom: 4px;
+  padding-right: 12px;
+  font-size: 14px;
+  color: rgb(54, 61, 68);
+}
+
+.post .details-post .title-post .reactions .react .comment i {
+  margin-right: 4px;
+  width: 24px;
+  height: 24px;
+}
+
+.post .details-post .title-post .reactions .react2 small {
+  margin-right: 8px;
+}
+
+.post .details-post .title-post .reactions .react2 button {
+  padding: 4px 12px;
+  background: rgb(210, 214, 219);
+}
+
+
+
+.post .details-post .title-post .reactions .react2 button:hover {
+  background: rgb(181 189 196);
 }

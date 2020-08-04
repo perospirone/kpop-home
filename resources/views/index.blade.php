@@ -30,13 +30,13 @@
 
             <div class="top-right">
                 <a href="#" class="btn btn-primary write-post">
-                    Write a post
+                  Write a post
                 </a>
                 <a class="iconButton" href="#">
-                    <i class="far fa-bell"></i>
+                  <i class="far fa-bell"></i>
                 </a>
                 <a class="iconButton" href="#">
-                    <i class="fas fa-bars"></i>
+                  <i class="fas fa-bars"></i>
                 </a>
             </div>
             
@@ -67,24 +67,61 @@
         </div>
         <div class="column2 box">
           <header>
-            
             <h2>Posts</h2>
 
-
             <nav>
-              
               <a href="#" class="feed">Feed</a>
               <a href="#">Week</a>
               <a href="#">Month</a>
               <a href="#">Year</a>
               <a href="#">Infinity</a>
               <a href="#">Latest</a>
-
             </nav>
-
-
           </header>
 
+          <div class="posts">
+            <div class="post">
+              <img src="{{ asset('assets/deno.png') }}">
+              <div class="details-post">
+                <div class="autor-post">
+                  <a href="#" class="name">Daniel de Sá</a> <br> <a href="#" class="date">Aug 3</a>
+                </div>
+
+                <div class="title-post">
+                  <h2>
+                    <a href="#">
+                      Deno é uma bosta e eu posso provar
+                    </a>
+                  </h2>
+                  <div class="hashtag">
+                    <a href="#">#metendoOpau</a>
+                  </div>
+
+                  <div class="reactions">
+                    <div class="react">
+                      <a href="#" class="like">
+                        <i class="far fa-heart"></i> 10 reactions
+                      </a>  
+                      
+                      <a href="#" class="comment">
+                        <i class="far fa-comment"></i> 10 comments
+                      </a>
+
+                    </div>
+                    <div class="react2">
+                      <small>4 min read</small>
+                      <button type="button" class="btn btn-light">Save</button>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>  
+
+
+
+          </div>
 
         </div>
         <div class="column3 box">
