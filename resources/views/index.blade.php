@@ -125,12 +125,38 @@
 
         </div>
         <div class="column3 box">
-            "At vero eos et accusamus et iusto odioblad dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+          <div class="login-lateral">
+            <header>
+              <h3>Join K</h3>
+            </header>
+
+            <a href="#" class="sign-facebook">Login com Facebook</a>
+            <a href="#" class="sign-twitter">Login com Twitter</a>
+            <a href="#" class="others-sign">Outras formas de Login</a>
+          </div>
+
+          <section class="listings">
+            <header>
+              <h3>Listagens</h3>
+              <div>
+                <a href="#">Mostrar todos</a>
+              </div>
+            </header>
+
+            <div>
+              <a href="#">lprejk asndkjskjasnkjsakjdsankj nsakjaskjsa</a>
+              <a href="#">alroe jkdsakjdsadsakjadsmdsadas</a>
+              <a href="#">asldsjalkds çajklçsa jksa daçls klçsa</a>
+              <a href="#">aklsdjklsadjklasldsa</a>
+            </div>
+
+            <a href="#" class="create-listing">Criar uma listagem</a>
+
+          </section>
+
+
         </div>
     </main>
-    <footer>
-
-    </footer>
 </div>
 </body>
 </html>
