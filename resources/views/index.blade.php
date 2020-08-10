@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/script.js') }}"> </script>
 </head>
 <body>
 <div class="mainContainer">
@@ -29,7 +30,7 @@
             </div>
 
             <div class="top-right">
-                <a href="#" class="btn btn-primary write-post">
+              <a href="#" class="btn btn-primary write-post">
                   Write a post
                 </a>
                 <a class="iconButton" href="#">
@@ -37,9 +38,8 @@
                 </a>
                 <a class="iconButton" href="#">
                   <i class="fas fa-bars"></i>
-                </a>
+              </a>
             </div>
-            
         </div>
     </header>
 
@@ -55,15 +55,36 @@
 
             <div class="vertical-menu2">
               <header class="separador">DESIGN YOUR EXPERIENCE</header>
-
-              <a href="#">#home</a>
-              <a href="#">#link 1</a>
-              <a href="#">#link 2</a>
-              <a href="#">#link 3</a>
-              <a href="#">#link 4</a>
-
-
+             
+              <navbar>
+                <a href="#">#home</a>
+                <a href="#">#link 1</a>
+                <a href="#">#link 2</a>
+                <a href="#">#link 3</a>
+                <a href="#">#link 4</a>
+                <a href="#">#link 5</a>
+                <a href="#">#link 6</a>
+                <a href="#">#link 3</a>
+                <a href="#">#link 4</a>
+                <a href="#">#link 1</a>
+                <a href="#">#link 2</a>
+                <a href="#">#link 3</a>
+                <a href="#">#link 4</a>
+                <a href="#">#link 1</a>
+                <a href="#">#link 2</a>
+                <a href="#">#link 3</a>
+                <a href="#">#link 4</a>
+                <a href="#">#link 1</a>
+                <a href="#">#link 2</a>
+                <a href="#">#link 3</a>
+                <a href="#">#link 4</a>
+              </navbar>
             </div>
+
+            <!-- <div class="anuncio"> 
+              <h1>ANUNCIE AQUI DANIEL</h1>
+            </div> -->
+
         </div>
         <div class="column2 box">
           <header>
@@ -148,10 +169,32 @@
               <a href="#">alroe jkdsakjdsadsakjadsmdsadas</a>
               <a href="#">asldsjalkds çajklçsa jksa daçls klçsa</a>
               <a href="#">aklsdjklsadjklasldsa</a>
+              <a href="#" class="create-listing">Criar uma listagem</a>
             </div>
 
-            <a href="#" class="create-listing">Criar uma listagem</a>
+            
+          </section>
+           <section class="news">
+            <header>
+              <h3>Noticias</h3>
+             <!-- <div>
+                <a href="#">Mostrar todos</a>
+             </div> -->
+            </header>
 
+            <div>
+              <a href="#">lprejk asndkjskjasnkjsakjdsankj nsakjaskjsa
+                <div class="comments">Comments: </div>
+              </a>
+              <a href="#">lprejk asndkjskjasnkjsakjdsankj nsakjaskjsa
+                <div class="comments">Comments: </div>
+              </a>
+              <a href="#">alroe jkdsakjdsadsakjadsmdsadas</a>
+              <a href="#">asldsjalkds çajklçsa jksa daçls klçsa</a>
+              <a href="#">aklsdjklsadjklasldsa</a>
+            </div>
+
+            
           </section>
 
 
