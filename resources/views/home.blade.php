@@ -31,16 +31,14 @@
             </div>
 
             <div class="top-right">
-              <a href="#" class="btn btn-primary write-post">
+              <a href="{{ URL::route('new') }}" class="btn btn-primary write-post">
                   Write a post
                 </a>
                 <a class="iconButton" href="#">
                   <i class="far fa-bell"></i>
                 </a>
                 <div class="menu-profile"> 
-                  <img src="{{ asset("assets/d.png") }}"> 
-
-                  </img>
+                  <img src="{{ asset("assets/d.png") }}"></img>
                 </div>
 
             </div>
