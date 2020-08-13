@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+html {
+  background-color: #eef0f1;
+}
+
+.mainContainer {
+  margin: 0;
+  padding: 0;
+  background-color: #eef0f1;
+  font-family: 'Roboto', 'Nunito', sans-serif;
+  height: 100vh;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  /* border-bottom: 1px solid #c5c5c5;
+  background-color: white; */
+  background: #eef0f1;
+  display: flex;
+}
+
+.top-bar-container {
+  display: flex;
+  height: 56px;
+  justify-content: space-between;
+}
+
+.logo {
+  display: inline-block;
+  margin: 10px;
+}
+
+.maxWidth {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flexDiv {
+  width: 886px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-top {
+  
+}
+
+.edit-preview button {
+  background: transparent;
+  border: 0;
+}
+
+.edit-preview button:hover {
+  color: #3b49df;
+}
+
+/*
+.close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  margin-right: 5px; 
+}
+
+.close i {
+  color: rgb(54, 61, 68);
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 24px;
+  height: 24px;
+}*/
+
+.divF {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close {
+  padding-left: 8px;
+  padding-right: 8px;
+  color: rgb(54, 61, 68);
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  margin-top: 6px;
+  margin-right: 4px;
+}
+
+.close a {
+  color: rgb(54, 61, 68);
+}
