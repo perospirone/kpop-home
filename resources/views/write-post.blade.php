@@ -16,22 +16,15 @@
       <div class="top-bar-container maxWidth divF">
 
         <div class="flexDiv">
-          <!-- <div class="logo">
-            Casa das Kpopers
-            </div> -->
+          <div class="text-top">
+            <span>Write a new post</span>
+          </div>
 
-            <div class="text-top">
-              <span>Write a new post</span>
-            </div>
-
-            <div class="edit-preview">
-              <button type="button" class="btn btn-light">Edit</button>
-              <button type="button" class="btn btn-light">Preview</button>
-            </div>
+          <div class="edit-preview">
+            <button type="button" class="btn btn-light">Edit</button>
+            <button type="button" class="btn btn-light">Preview</button>
+          </div>
         </div>
-
-        
-
       </div>
 
       <div class="close">
@@ -40,8 +33,27 @@
         </a>
       </div>
     </header>
+    <main class="post">
+      <div class="write">
+        <div class="text-padding">
+          <button type="button" class="cover-imagebtn">Add a cover image</button>
+          <div class="title">
+            <!-- <textarea type="text" placeholder="New post title here..." ></textarea> -->
+            <input placeholder="New post title here...">
+          </div>
 
+          <div class="tags">
+            <input placeholder="Add up to 4 tags...">
+          </div>
+
+        </div>
+        <div></div>
+      </div>
+
+      <div class="trick">
+        Use markdown pow, fica daora
+      </div>
+    </main>
 
   </body>
-
 </html>
