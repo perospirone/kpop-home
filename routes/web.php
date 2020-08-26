@@ -23,4 +23,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/new', function () {
   return view('write-post');
-})->name('new');
+})->name('new')->middleware('auth');
