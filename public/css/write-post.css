@@ -89,7 +89,9 @@ header {
   background: white;
   margin-left: 50px;
   border-radius: 5px;
-  box-shadow: rgba(8, 9, 10, 0.1) 0px 0px 0px 1px
+  box-shadow: rgba(8, 9, 10, 0.1) 0px 0px 0px 1px;
+  overflow-y: scroll;
+  height: 80vh;
 }
 
 .text-padding {
@@ -124,4 +126,54 @@ header {
   font-size: 1rem;
   border: 0;
   color: #ACB3B9;
+}
+
+.upload-image {
+  padding: 8px 64px;
+  margin: -32px -64px 24px -64px;
+  background: #f9fafa;
+  height: 56px;
+}
+
+.upload-image button {
+  background: transparent;
+  padding: 8px 16px 8px 12px;
+  color: rgb(100, 112, 125);
+  text-align: center;
+  display: flex;
+}
+
+.upload-image button i {
+  margin-right: 8px;
+  font-size: 24px;
+}
+
+.write-content {
+  resize: none;
+  width: 100%;
+  border: 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.footer {
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.publish-btn {
+  padding: 8px 16px;
+  margin-right: 8px;
+  background-color: rgb(59, 73, 223) !important;
+}
+
+.save-draft {
+  background-color: rgb(210, 214, 219) !important;
+  padding: 8px 16px;
+  margin-right: 8px;
+}
+
+.revert-btn {
+  background: transparent !important;
+  border: transparent !important;
 }
