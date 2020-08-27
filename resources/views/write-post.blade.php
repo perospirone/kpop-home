@@ -44,11 +44,11 @@
             </button>
             <div class="title">
               <!-- <textarea type="text" placeholder="New post title here..." ></textarea> -->
-              <input name="title" placeholder="New post title here...">
+              <input name="title" placeholder="New post title here..." required>
             </div>
 
             <div class="tags">
-              <input name="tags"  placeholder="Add up to 4 tags...">
+              <input name="tags"  placeholder="Add up to 4 tags..." required>
             </div>
           </div>
 
@@ -60,7 +60,7 @@
                 <input type="file" name="image">
               </button>
             </div>
-            <textarea class="write-content" name="content"  placeholder="Write your post content here..."></textarea>
+            <textarea class="write-content" name="content"  placeholder="Write your post content here..." required></textarea>
           </div>
         </div>
 
