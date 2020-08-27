@@ -34,41 +34,42 @@
       </div>
     </header>
     <main class="post">
-      <div class="write">
-        <div class="text-padding">
-          <button type="button" class="cover-imagebtn">Add a cover image</button>
-          <div class="title">
-            <!-- <textarea type="text" placeholder="New post title here..." ></textarea> -->
-            <input placeholder="New post title here...">
+      <form action="@" method="POST">
+        <div class="write">
+          <div class="text-padding">
+            <button type="button" class="cover-imagebtn">Add a cover image</button>
+            <div class="title">
+              <!-- <textarea type="text" placeholder="New post title here..." ></textarea> -->
+              <input name="title" placeholder="New post title here...">
+            </div>
+
+            <div class="tags">
+              <input name="tags"  placeholder="Add up to 4 tags...">
+            </div>
           </div>
 
-          <div class="tags">
-            <input placeholder="Add up to 4 tags...">
+          <div class="text-padding">
+            <div class="upload-image">
+              <button class="btn">
+                <i class="fas fa-image"></i>
+                Upload image
+              </button>
+            </div>
+            <textarea class="write-content" name="content"  placeholder="Write your post content here..."></textarea>
           </div>
         </div>
 
-        <div class="text-padding">
-          <div class="upload-image">
-            <button class="btn">
-              <i class="fas fa-image"></i>
-              Upload image
-            </button>
-          </div>
-          <textarea class="write-content" placeholder="Write your post content here..."></textarea>
+        <div class="trick">
+          Use markdown pow, fica daora
         </div>
-      </div>
 
-      <div class="trick">
-        Use markdown pow, fica daora
-      </div>
+        <div class="footer">
+          <button type="submit" class="btn btn-primary publish-btn">Publish</button>
+          <button class="btn btn-light save-draft">Save draft</button>
+          <button class="btn btn-light revert-btn">Revert new changes</button>
+        </div>
 
-      <div class="footer">
-        <button class="btn btn-primary publish-btn">Publish</button>
-        <button class="btn btn-light save-draft">Save draft</button>
-        <button class="btn btn-light revert-btn">Revert new changes</button>
-
-
-      </div>
+      </form>
     </main>
 
   </body>
