@@ -36,4 +36,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function relPosts() {
+      return $this->hasMany('App\Models\Post', 'creator_id');
+    }
 }
