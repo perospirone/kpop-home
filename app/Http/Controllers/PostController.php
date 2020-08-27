@@ -22,6 +22,7 @@ class PostController extends Controller {
     $path_cover_image;
     $path_image;
 
+    // Depois tem que colocar uma mensagem de erro pro usuario aqui
     if($req->file('cover-image')->isValid()) {
     	$path_cover_image = $req->file('cover-image')->store('images');
     }
