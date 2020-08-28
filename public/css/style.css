@@ -240,7 +240,7 @@ header {
   height: 500px;
   margin-bottom: 0.5rem;
   border: 1px solid #c5c5c5 !important;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
 }
 
 .post img {
