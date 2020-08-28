@@ -5,13 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 
-
 class PostController extends Controller {
 
 	public $objPosts;
 
 	public function __construct() {
 		$this->objPost = new Post;
+		$this->middleware('auth');
 	} 
 
   public function create(Request $req) {
@@ -24,11 +24,11 @@ class PostController extends Controller {
 
     // Depois tem que colocar uma mensagem de erro pro usuario aqui
     if($req->file('cover-image')->isValid()) {
-    	$path_cover_image = $req->file('cover-image')->store('images');
+    	$path_cover_image = $req->file('cover-image')->store('public/images');
     }
 
     if($req->file('image')->isValid()) {
-    	$path_image = $req->file('image')->store('images');
+    	$path_image = $req->file('image')->store('public/images');
     }
 
     $id = auth()->user()->id;
@@ -41,6 +41,19 @@ class PostController extends Controller {
   public function index() {
   	$objPosts = new Post;
 
-  	dd($objPosts->all());
+  	//$objUser = new User;
+  	//dd($objUser);
+  	$allPosts = $objPosts->all();
+
+		/*foreach ($allPosts as $value) {
+			// echo $value . PHP_EOL;
+
+			echo $value;
+		}*/
+
+		//echo $allPosts[0]->id;
+
+
+  	return view('home', ['posts' => $allPosts]);
   }
 }

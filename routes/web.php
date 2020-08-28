@@ -19,10 +19,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'PostController@index')->name('home');
 
 Route::get('/new', function () {
   return view('write-post');
-})->name('new')->middleware('auth');
+})->name('new');
 
-Route::post('/posts/create', 'PostController@create')->name('create.post')->middleware('auth');
+Route::post('/posts/create', 'PostController@create')->name('create.post');
