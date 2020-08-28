@@ -29,4 +29,4 @@ Route::post('/posts/create', 'PostController@create')->name('create.post');
 
 // Route::get('/post/')
 
-Route::get('/posts/{id}', 'PostController@addLikes');
+Route::post('/posts/{id}', 'PostController@addLikes');

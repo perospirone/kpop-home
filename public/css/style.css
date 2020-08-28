@@ -232,6 +232,7 @@ header {
   height: 100%;
 }*/
 
+
 .post {
   display: flex;
   flex-direction: column;
@@ -254,6 +255,9 @@ header {
   background: white;
 }
 
+.react a {
+  cursor: pointer;
+}
 
 .post .details-post .autor-post {
   display: block;

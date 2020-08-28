@@ -57,14 +57,25 @@ class PostController extends Controller {
   	return view('home', ['posts' => $allPosts]);
   }
 
-  public function addLikes($id) {
+  public function addLikes($id, Request $req) {
   	$posts = Post::all();
 
   	$post = $posts->find($id);
 
   	$likes = $post->num_likes;
 
-  	dd($post->num_likes);
+  	//dd($post->num_likes);
+
+  	//dd($req);
+
+  	$likes = $post->num_likes;
+
+		$post->num_likes =  $likes + 1;
+
+		$post->save();
+
+
+  	//return $post->num_likes;
 
 
   }
