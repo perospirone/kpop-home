@@ -33,7 +33,7 @@ class PostController extends Controller {
 
     $id = auth()->user()->id;
 
-    $this->objPost->create(['title' => $title, 'tag' => $tag, 'content' => $content, 'path_cover_image' => $path_cover_image, 'path_image' => $path_image, 'creator_id' => $id]);
+    $this->objPost->create(['title' => $title, 'tag' => $tag, 'content' => $content, 'path_cover_image' => $path_cover_image, 'path_image' => $path_image, 'creator_id' => $id, 'num_likes' => 0, 'num_comments' => 0]);
 
   }
 
@@ -55,5 +55,17 @@ class PostController extends Controller {
 
 
   	return view('home', ['posts' => $allPosts]);
+  }
+
+  public function addLikes($id) {
+  	$posts = Post::all();
+
+  	$post = $posts->find($id);
+
+  	$likes = $post->num_likes;
+
+  	dd($post->num_likes);
+
+
   }
 }

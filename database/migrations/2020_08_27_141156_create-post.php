@@ -20,6 +20,10 @@ class CreatePost extends Migration
         $table->string('path_cover_image');
         $table->string('path_image');
         $table->string('content');
+        $table->integer('num_likes');
+        $table->integer('num_comments');
+        // $table->integer('time_read');
+
 
         $table->unsignedBigInteger('creator_id');
 

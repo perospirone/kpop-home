@@ -131,21 +131,21 @@
                       </a>
                     </h2>
                     <div class="hashtag">
-                      <a href="#">#metendoOpau</a>
+                      <a href="#">{{ $post->tag }}</a>
                     </div>
 
                     <div class="reactions">
                       <div class="react">
-                        <a href="#" class="like">
-                          <i class="far fa-heart"></i> 10 reactions
+                        <a href="#" class="like" onclick="handleLike()">
+                          <i class="far fa-heart"></i> {{ $post->num_likes }} likes
                         </a>  
 
                         <a href="#" class="comment">
-                          <i class="far fa-comment"></i> 10 comments
+                          <i class="far fa-comment"></i> {{ $post->num_comments }} comments
                         </a>
                       </div>
                       <div class="react2">
-                        <small>4 min read</small>
+                        <!-- <small>{{$post->time_read}} min read</small> -->
                         <button type="button" class="btn btn-light">Save</button>
                       </div>
 
@@ -155,7 +155,7 @@
 
               </div>  
               @endforeach
-              
+
 
 
 
