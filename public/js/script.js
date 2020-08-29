@@ -10,11 +10,12 @@ function handleLike(idUser, idPost) {
 	httpRequest.onreadystatechange = (req) => {
 		
 		if(httpRequest.status == 200) {
-			console.log(httpRequest)
+
 			let a = document.getElementById(`like${idPost}`);
+			let icone = document.getElementById(`heart${idPost}`);
 
-			document.getElementById(`like${idPost}`).innerHTML = Number(a.innerHTML) + 1;		
-
+			document.getElementById(`like${idPost}`).innerHTML = Number(a.innerHTML) + 1;
+			icone.className = 'fas fa-heart';
 		}
 	}
 

@@ -139,7 +139,7 @@
                     <div class="reactions">
                       <div class="react">
                         <a class="like" onclick="handleLike({{ auth()->user()->id }}, {{ $post->id }} )">
-                          <i class="far fa-heart"></i> <span id="like{{ $post->id }}">{{ $post->num_likes }}</span> likes
+                          <i id="heart{{ $post->id }}" class="far fa-heart"></i> <span id="like{{ $post->id }}">{{ $post->num_likes }}</span> likes
                         </a>  
 
                         <a class="comment">
