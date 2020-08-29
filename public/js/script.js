@@ -11,10 +11,10 @@ function handleLike(idUser, idPost) {
 		
 		if(httpRequest.status == 200) {
 
-			let a = document.getElementById(`like${idPost}`);
+			let likes = document.getElementById(`like${idPost}`);
 			let icone = document.getElementById(`heart${idPost}`);
 
-			document.getElementById(`like${idPost}`).innerHTML = Number(a.innerHTML) + 1;
+			document.getElementById(`like${idPost}`).innerHTML = Number(likes.innerHTML) + 1;
 			icone.className = 'fas fa-heart';
 		}
 	}
