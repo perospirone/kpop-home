@@ -10,11 +10,12 @@ class Like extends Model
 	//protected $fillable = ['title', 'tag', 'path_cover_image', 'path_image', 'content', 'creator_id', 'num_likes', 'num_comments'];
 
 	public function relUsers() {
-		return $this->hasOne('App\User', 'id_user', 'id');
+    // return $this->hasOne('App\User', 'id_user', 'id');
+    return $this->belongsToMany('App\User');
 	}
 
 	public function relPost() {
-		return $this->hasOne('App\Models\Post', 'id_post', 'id');
-		return $this->belongsToMany();
+		// return $this->hasOne('App\Models\Post', 'id_post', 'id');
+		return $this->belongsToMany('App\Models\Post');
 	}
 }

@@ -35,6 +35,8 @@ class PostController extends Controller {
 
     $this->objPost->create(['title' => $title, 'tag' => $tag, 'content' => $content, 'path_cover_image' => $path_cover_image, 'path_image' => $path_image, 'creator_id' => $id, 'num_likes' => 0, 'num_comments' => 0]);
 
+    return redirect('/home');
+
   }
 
   // Metodo pra mostrar todos os posts na pagina inicial
