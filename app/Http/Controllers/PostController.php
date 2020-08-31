@@ -87,6 +87,7 @@ use App\User;
         $post->save();
 
       } else {
+        // Depois tem q validar isso melhor dani
         return $d;
       }
 
