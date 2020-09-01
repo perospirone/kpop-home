@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+  return view('index');
 });
 
 Auth::routes();
@@ -26,7 +26,5 @@ Route::get('/new', function () {
 })->name('new');
 
 Route::post('/posts/create', 'PostController@create')->name('create.post');
-
-// Route::get('/post/')
 
 Route::post('/posts/{id}', 'PostController@addLikes');
