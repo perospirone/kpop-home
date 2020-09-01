@@ -43,20 +43,7 @@ use App\User;
 
     // Metodo pra mostrar todos os posts na pagina inicial
     public function index() {
-      $objPosts = new Post;
-
-      //$objUser = new User;
-      //dd($objUser);
-      $allPosts = $objPosts->all();
-
-    /*foreach ($allPosts as $value) {
-      // echo $value . PHP_EOL;
-
-      echo $value;
-    }*/
-
-      //echo $allPosts[0]->id;
-
+      $allPosts = Post::all();
 
       return view('home', ['posts' => $allPosts]);
     }
