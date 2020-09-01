@@ -139,7 +139,14 @@
                     <div class="reactions">
                       <div class="react">
                         <a class="like" onclick="handleLike({{ auth()->user()->id }}, {{ $post->id }} )">
-                          <i id="heart{{ $post->id }}" class="far fa-heart"></i> <span id="like{{ $post->id }}">{{ $post->num_likes }}</span> likes
+                          @foreach ($likes as $like)
+                            {{ $like }}
+                            @if($like->id_post === $post->id && $like->id_user === auth()->user()->id)
+                              <i id="heart{{ $post->id }}" class="fas fa-heart"></i> <span id="like{{ $post->id }}">{{ $post->num_likes }}</span> likes
+                            @else
+                              <i id="heart{{ $post->id }}" class="far fa-heart"></i> <span id="like{{ $post->id }}">{{ $post->num_likes }}</span> likes
+                            @endif
+                          @endforeach
                         </a>  
 
                         <a class="comment">

@@ -44,8 +44,9 @@ use App\User;
     // Metodo pra mostrar todos os posts na pagina inicial
     public function index() {
       $allPosts = Post::all();
+      $allLikes = Like::all();
 
-      return view('home', ['posts' => $allPosts]);
+      return view('home', ['posts' => $allPosts, 'likes' => $allLikes]);
     }
 
     public function addLikes($id, Request $req) {
