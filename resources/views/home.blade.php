@@ -129,7 +129,7 @@
                   <div class="title-post">
                     <h2>
                       <a href="#">
-                        {{$post->title}}
+                        {{ $post->title }}
                       </a>
                     </h2>
                     <div class="hashtag">
