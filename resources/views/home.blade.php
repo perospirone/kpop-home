@@ -39,8 +39,10 @@
           <a class="iconButton" href="#">
             <i class="far fa-bell"></i>
           </a>
-          <div class="menu-profile"> 
-            <img src="{{ asset('assets/d.png') }}"></img>
+          <div class="menu-profile">
+            <a href="{{ URL::to('/profile/' . auth()->user()->id ) }}">
+              <img src="{{ asset('assets/d.png') }}"></img>
+            </a>
           </div>
 
         </div>
