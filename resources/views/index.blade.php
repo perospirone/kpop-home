@@ -30,7 +30,7 @@
             </div>
 
             <div class="top-right">
-              <a href="#" class="btn btn-primary write-post">
+              <a href="{{ URL::route('new') }}" class="btn btn-primary write-post">
                   Write a post
                 </a>
                 <a class="iconButton" href="#">
@@ -101,48 +101,57 @@
           </header>
 
           <div class="posts">
-            <div class="post">
-              <img src="{{ asset('assets/deno.png') }}">
-              <div class="details-post">
-                <div class="autor-post">
-                  <a href="#" class="name">Daniel de Sá</a> <br> <a href="#" class="date">Aug 3</a>
-                </div>
 
-                <div class="title-post">
-                  <h2>
-                    <a href="#">
-                      Deno é uma bosta e eu posso provar
-                    </a>
-                  </h2>
-                  <div class="hashtag">
-                    <a href="#">#metendoOpau</a>
+              @foreach ($posts as $post)
+
+              <div class="post">
+                @if($post->path_cover_image === null)
+
+                @else
+                  <img src="{{ asset('storage/' . $post->path_cover_image) }}">
+                @endif
+                
+                <div class="details-post">
+                  <div class="autor-post">
+                    <a href="#" class="name">Daniel de Sá</a> <br> <a href="#" class="date">{{ $post->created_at }}</a>
                   </div>
 
-                  <div class="reactions">
-                    <div class="react">
-                      <a href="#" class="like">
-                        <i class="far fa-heart"></i> 10 reactions
-                      </a>  
-                      
-                      <a href="#" class="comment">
-                        <i class="far fa-comment"></i> 10 comments
+                  <div class="title-post">
+                    <h2>
+                      <a href="#">
+                        {{ $post->title }}
                       </a>
-
-                    </div>
-                    <div class="react2">
-                      <small>4 min read</small>
-                      <button type="button" class="btn btn-light">Save</button>
+                    </h2>
+                    <div class="hashtag">
+                      <a href="#">{{ $post->tag }}</a>
                     </div>
 
+                    <div class="reactions">
+                      <div class="react">
+                        <a class="like" onclick="handleLike({{ auth()->user()->id }}, {{ $post->id }} )">
+                          <i id="heart{{ $post->id }}" class="far fa-heart"></i> <span id="like{{ $post->id }}">{{ $post->num_likes }}</span> likes
+                        </a>  
+
+                        <a class="comment">
+                          <i class="far fa-comment"></i> {{ $post->num_comments }} comments
+                        </a>
+                      </div>
+                      <div class="react2">
+                        <!-- <small>{{$post->time_read}} min read</small> -->
+                        <button type="button" class="btn btn-light">Save</button>
+                      </div>
+
+                    </div>
                   </div>
                 </div>
 
-              </div>
-            </div>  
+              </div>  
+              @endforeach
 
 
 
-          </div>
+
+            </div>
 
         </div>
         <div class="column3 box">
