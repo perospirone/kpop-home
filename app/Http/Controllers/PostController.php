@@ -14,7 +14,7 @@ use App\User;
     public function __construct() {
       $this->objPost = new Post;
       $this->middleware('auth');
-    } 
+    }
 
     public function create(Request $req) {
       $title = $req->title;
@@ -24,12 +24,15 @@ use App\User;
       $path_cover_image;
       $path_image;
 
-      // Depois tem que colocar uma mensagem de erro pro usuario aqui
-      if($req->file('cover-image')->isValid()) {
+      if($req->file('cover-image') === null) {
+        $path_cover_image = null;
+      } elseif($req->file('cover-image')->isValid()) {
         $path_cover_image = $req->file('cover-image')->store('public/images');
       }
 
-      if($req->file('image')->isValid()) {
+      if($req->file('image') === null) {
+        $path_image = null;
+      } elseif($req->file('image')->isValid()) {
         $path_image = $req->file('image')->store('public/images');
       }
 
@@ -82,7 +85,7 @@ use App\User;
         return $d;
       }
 
-      
+
 
       //return $post->num_likes;
 

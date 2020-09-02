@@ -122,7 +122,12 @@
               @endphp
 
               <div class="post">
-                <img src="{{ asset('storage/' . $post->path_cover_image) }}">
+                @if($post->path_cover_image === null)
+
+                @else
+                  <img src="{{ asset('storage/' . $post->path_cover_image) }}">
+                @endif
+                
                 <div class="details-post">
                   <div class="autor-post">
                     <a href="#" class="name">Daniel de Sá</a> <br> <a href="#" class="date">{{ $post->created_at }}</a>

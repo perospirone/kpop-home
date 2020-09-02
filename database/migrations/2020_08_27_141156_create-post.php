@@ -17,8 +17,8 @@ class CreatePost extends Migration
         $table->id();
         $table->string('title');
         $table->string('tag');
-        $table->string('path_cover_image');
-        $table->string('path_image');
+        $table->string('path_cover_image')->nullable();
+        $table->string('path_image')->nullable();
         $table->string('content');
         $table->integer('num_likes');
         $table->integer('num_comments');
