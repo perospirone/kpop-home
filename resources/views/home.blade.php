@@ -53,9 +53,13 @@
         <a class="sidebar-profile">
           <img src="{{ asset('assets/d.png') }}" width="48" height="48">
 
+          @php
+            $username = "@" . auth()->user()->username;
+          @endphp
+
           <div> 
-            <h4>Daniel de Sá</h4>
-            <small>@danitw</small>
+            <h4>{{ auth()->user()->name }}</h4>
+            <small>{{ $username }}</small>
           </div>
         </a>
 
