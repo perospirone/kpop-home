@@ -114,10 +114,12 @@
                 <a href="#">Latest</a>
               </nav>
             </header>
-
             <div class="posts">
 
               @foreach ($posts as $post)
+              @php
+                $deulike = false;
+              @endphp
 
               <div class="post">
                 <img src="{{ asset('storage/' . $post->path_cover_image) }}">
@@ -139,14 +141,20 @@
                     <div class="reactions">
                       <div class="react">
                         <a class="like" onclick="handleLike({{ auth()->user()->id }}, {{ $post->id }} )">
-                          @foreach ($likes as $like)
-                            {{ $like }}
-                            @if($like->id_post === $post->id && $like->id_user === auth()->user()->id)
-                              <i id="heart{{ $post->id }}" class="fas fa-heart"></i> <span id="like{{ $post->id }}">{{ $post->num_likes }}</span> likes
-                            @else
-                              <i id="heart{{ $post->id }}" class="far fa-heart"></i> <span id="like{{ $post->id }}">{{ $post->num_likes }}</span> likes
-                            @endif
-                          @endforeach
+                          @php
+                            foreach($likes as $like) {
+                              if($like->id_post == $post->id) {
+                                $deulike = true;
+                              } 
+                            }
+
+                          @endphp
+                          
+                          @if($deulike == true)
+                            <i id="heart{{ $post->id }}" class="fas fa-heart"></i> <span id="like{{ $post->id }}">{{ $post->num_likes }}</span> likes
+                          @else
+                            <i id="heart{{ $post->id }}" class="far fa-heart"></i> <span id="like{{ $post->id }}">{{ $post->num_likes }}</span> likes
+                          @endif
                         </a>  
 
                         <a class="comment">
