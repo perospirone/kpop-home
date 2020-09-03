@@ -27,4 +27,4 @@ Route::post('/posts/create', 'PostController@create')->name('create.post');
 
 Route::post('/posts/{id}', 'PostController@addLikes');
 
-Route::get('/profile/{id}', 'ProfileController@show');
+Route::get('/profile/{username}', 'ProfileController@show');
