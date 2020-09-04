@@ -10,8 +10,8 @@
     "require": {
         "php": "^7.2.5",
         "fideloper/proxy": "^4.2",
-        "fruitcake/laravel-cors": "^1.0",
-        "guzzlehttp/guzzle": "^6.3",
+        "fruitcake/laravel-cors": "^2.0",
+        "guzzlehttp/guzzle": "^7.0",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0"
     },
@@ -20,9 +20,14 @@
         "fzaninotto/faker": "^1.9.1",
         "laravel/ui": "^2.1",
         "mockery/mockery": "^1.3.1",
+<<<<<<< HEAD
         "nunomaduro/collision": "^4.1",
         "nunomaduro/phpinsights": "^1.14",
         "phpunit/phpunit": "^9.0"
+=======
+        "nunomaduro/collision": "^5.0",
+        "phpunit/phpunit": "^9.3"
+>>>>>>> master
     },
     "config": {
         "optimize-autoloader": true,
