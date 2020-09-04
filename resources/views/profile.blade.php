@@ -57,7 +57,7 @@
           <h1>Daniel de Sá</h1>
           <p>Apenas um cara q gosta de codigos e poesia</p>
 
-          <div>
+          <div class="infos">
             <span class="info-local">
               <i class="fas fa-map-marker-alt" width="24px" height="24px" ></i> 
               São Paulo, Brasil</span>
@@ -66,7 +66,14 @@
               Joined on 20 de março de 2020 </span>
             <!-- <span class=""></span> -->
           </div>
+        </div>  
+        <div class="status">
+          <div>
+            <strong>Status</strong>
+            <p>Estudando</p>
+          </div>
         </div>
+
       </div>
     </main>
 
