@@ -1,0 +1,83 @@
+main {
+  margin: 0 !important;
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.marrom {
+  width: 100%;
+  height: 120px;
+  background: #4d4d4d;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 95%;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: -50px;
+  background: white;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); */
+  /* box-shadow: 0 0 0 1px rgba(8, 9, 10, 0.1); */
+
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  z-index: 27;
+  padding: 64px 16px 16px 16px;
+}
+
+.descr {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 24px;
+  padding-top: 0 !important;
+}
+
+.descr h1 {
+  color: rgb(8, 9, 10);
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.descr p {
+  font-size: 18px;
+  color: rgb(32, 36, 40);
+  margin-bottom: 16px;
+}
+
+.descr div {
+  color: rgb(100, 112, 125);
+  margin-bottom: 8px;
+}
+
+.descr div span {
+  padding: 4px 12px 4px 12px;
+}
+
+.descr div .info-local i {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.descr div .info-local {
+  font-size: 14px;
+}
+
+.descr div .info-create {
+  font-size: 14px;
+}
+
+.descr div .info-create i {
+  font-size: 20px;
+  margin-right: 8px;
+}

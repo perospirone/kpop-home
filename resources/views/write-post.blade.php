@@ -34,28 +34,33 @@
       </div>
     </header>
     <main class="post">
-      <form action="@" method="POST">
+      <form action="{{ route('create.post')  }}" method="POST" enctype="multipart/form-data">
+        @csrf
         <div class="write">
           <div class="text-padding">
-            <button type="button" class="cover-imagebtn">Add a cover image</button>
+            <button type="button" class="cover-imagebtn">
+              Add a cover image
+              <input name="cover-image" type="file">
+            </button>
             <div class="title">
               <!-- <textarea type="text" placeholder="New post title here..." ></textarea> -->
-              <input name="title" placeholder="New post title here...">
+              <input name="title" placeholder="New post title here..." required>
             </div>
 
             <div class="tags">
-              <input name="tags"  placeholder="Add up to 4 tags...">
+              <input name="tags"  placeholder="Add up to 4 tags..." required>
             </div>
           </div>
 
           <div class="text-padding">
             <div class="upload-image">
-              <button class="btn">
+              <button type="button" class="btn">
                 <i class="fas fa-image"></i>
-                Upload image
+                Upload image   
+                <input type="file" name="image">
               </button>
             </div>
-            <textarea class="write-content" name="content"  placeholder="Write your post content here..."></textarea>
+            <textarea class="write-content" name="content"  placeholder="Write your post content here..." required></textarea>
           </div>
         </div>
 
