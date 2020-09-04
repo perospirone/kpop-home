@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "Casa das Kpopers",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "Uma rede social para a comunidade brasileira de Kpop",
     "keywords": [
         "framework",
         "laravel"
