@@ -73,10 +73,44 @@
             <p>Estudando</p>
           </div>
         </div>
+      </div>
 
+      <div class="sidebar">
+        <div class="user-sidebar">
+          <div class="widget">
+            <header>
+              <h4>Skills/Languages</h4>
+            </header>
+            <div class="widget-body">
+              <p>Js, Nodejs, PHP</p>
+            </div>
+          </div>
+
+          <div class="widget">
+            <header>
+              <h4>Learning/Trying</h4>
+            </header>
+            <div class="widget-body">
+              <p>Go</p>
+            </div>
+          </div>
+
+          <div class="widget">
+            <header>
+              <h4>Avaiable for</h4>
+            </header>
+            <div class="widget-body">
+              <p>Projects</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="posts-user">b</div>
+        <div>c</div>
       </div>
     </main>
 
-    </div>
-  </body>
-  </html>
+  </div>
+</body>
+</html>
