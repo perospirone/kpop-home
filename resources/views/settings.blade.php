@@ -7,7 +7,7 @@
   <title>Casa das Kpopers</title>
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/home.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/settings.css') }}">
   <script src="https://kit.fontawesome.com/60e76d6bf1.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -50,7 +50,34 @@
         </div>
       </div>
     </header>
+   
+    @php
+      $username = '@' . auth()->user()->username;
+    @endphp
 
+    <main>
+      <header><h1>Settings for <a href="{{ URL::to('/profile/' . auth()->user()->username)  }}" >{{ $username }}</a></h1></header>
+
+      <div>
+        <div class="sidebar-left">
+          <nav>
+            <a href="#">Profile</a>
+            <a href="#">UX</a>
+            <a href="#">Integrations</a>
+            <a href="#">Notifications</a>
+            <a href="#">Organization</a>
+            <a href="#">Billing</a>
+            <a href="#">Account</a>
+            <a href="#">Misc</a>
+          </nav>
+        </div>
+      
+        <div class="content">b</div>
+      </div>
+
+
+
+    </main>
 
   </div>
 </body>
