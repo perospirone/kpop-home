@@ -53,7 +53,7 @@
     <main>
       <div class="marrom"></div>
       <div class="profile">
-        <a href="{{ URL::route('new') }}" class="btn btn-primary write-post">
+        <a href="{{ URL::route('settings') }}" class="btn btn-primary write-post">
           Settings
         </a>
         <div class="descr">
