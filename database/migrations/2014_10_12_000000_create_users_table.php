@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('description')->nullable();
             $table->string('path_profile_image')->nullable();
+            $table->string('twitter_user')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
