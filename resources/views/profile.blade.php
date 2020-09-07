@@ -104,6 +104,12 @@
             </div>
           </div>
 
+          <div class="sidebar-data">
+            <div>0 Posts Published</div>
+            <div>0 Comments Written</div>
+            <div>35 Tags Followed</div>
+          </div>
+
         </div>
 
         <div class="posts-user">b</div>

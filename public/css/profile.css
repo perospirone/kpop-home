@@ -156,3 +156,13 @@ main {
   font-weight: 400;
   font-size: 15.3px;
 }
+
+.sidebar-data {
+  border-radius: 3px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  padding: 16px;
+  color: rgb(100, 112, 125);
+  font-size: 15.3px;
+  margin-bottom: 32px;
+}
