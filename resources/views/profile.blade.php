@@ -53,6 +53,9 @@
     <main>
       <div class="marrom"></div>
       <div class="profile">
+        <a href="{{ URL::route('new') }}" class="btn btn-primary write-post">
+          Settings
+        </a>
         <div class="descr">
           <h1>Daniel de Sá</h1>
           <p>Apenas um cara q gosta de codigos e poesia</p>

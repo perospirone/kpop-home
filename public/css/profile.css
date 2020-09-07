@@ -15,6 +15,7 @@ main {
 
 .profile {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   width: 95%;
@@ -28,6 +29,13 @@ main {
   border-radius: 5px;
   z-index: 27;
   padding: 64px 16px 16px 16px;
+}
+
+main .profile .write-post {
+  align-self: flex-end;
+  position: absolute;
+  top: 0;
+  margin-top: 5px;
 }
 
 .descr {
