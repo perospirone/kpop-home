@@ -49,7 +49,7 @@
         </div>
       </div>
     </header>
-    
+
     <main>
       <div class="marrom"></div>
       <div class="profile">
@@ -59,14 +59,14 @@
 
           <div class="infos">
             <span class="info-local">
-              <i class="fas fa-map-marker-alt" width="24px" height="24px" ></i> 
+              <i class="fas fa-map-marker-alt" width="24px" height="24px"></i>
               São Paulo, Brasil</span>
             <span class="info-create">
               <i class="fas fa-birthday-cake"></i>
               Joined on 20 de março de 2020 </span>
             <!-- <span class=""></span> -->
           </div>
-        </div>  
+        </div>
         <div class="status">
           <div>
             <strong>Status</strong>
@@ -112,7 +112,72 @@
 
         </div>
 
-        <div class="posts-user">b</div>
+        <div class="posts-user">
+          <div class="posts">
+
+            @foreach ($posts as $post)
+            @php
+            $deulike = false;
+            @endphp
+
+            <div class="post">
+              @if($post->path_cover_image === null)
+
+              @else
+              <img src="{{ asset('storage/' . $post->path_cover_image) }}">
+              @endif
+
+              <div class="details-post">
+                <div class="autor-post">
+                  <a href="#" class="name">Daniel de Sá</a> <br> <a href="#" class="date">{{ $post->created_at }}</a>
+                </div>
+
+                <div class="title-post">
+                  <h2>
+                    <a href="#">
+                      {{ $post->title }}
+                    </a>
+                  </h2>
+                  <div class="hashtag">
+                    <a href="#">{{ $post->tag }}</a>
+                  </div>
+
+                  <div class="reactions">
+                    <div class="react">
+                      <a class="like" onclick="handleLike({{ auth()->user()->id }}, {{ $post->id }} )">
+                        @php
+                        foreach($likes as $like) {
+                        if($like->id_post == $post->id) {
+                        $deulike = true;
+                        }
+                        }
+
+                        @endphp
+
+                        @if($deulike == true)
+                        <i id="heart{{ $post->id }}" class="fas fa-heart"></i> <span id="like{{ $post->id }}">{{ $post->num_likes }}</span> likes
+                        @else
+                        <i id="heart{{ $post->id }}" class="far fa-heart"></i> <span id="like{{ $post->id }}">{{ $post->num_likes }}</span> likes
+                        @endif
+                      </a>
+
+                      <a class="comment">
+                        <i class="far fa-comment"></i> {{ $post->num_comments }} comments
+                      </a>
+                    </div>
+                    <div class="react2">
+                      <!-- <small>{{$post->time_read}} min read</small> -->
+                      <button type="button" class="btn btn-light">Save</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            @endforeach
+          </div>
+        </div>
         <div>c</div>
       </div>
     </main>
