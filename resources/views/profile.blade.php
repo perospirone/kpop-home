@@ -67,7 +67,9 @@
             <span class="info-create">
               <i class="fas fa-birthday-cake"></i>
               Joined on 20 de março de 2020 </span>
-            <!-- <span class=""></span> -->
+            <a href="#" class="icon-twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
           </div>
         </div>
         <div class="status">
