@@ -73,17 +73,75 @@
         </div>
       
         <div class="content">
-          <form action="#" method="post">
+          <form action="#" method="post" enctype="multipart/form-data">
             <div class="field">
               <label for="email">Email</label>
               <input type="email" placeholder="danieldesa@gmail.com" value="twz3xc21@gmail.com" name="email">
             </div>
+
+            <div class="field">
+              <label for="username">Username</label>
+              <input type="text" placeholder="danitw" value="danitw" name="username">
+            </div>
+
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" placeholder="Daniel" value="Daniel" name="name">
+            </div>
+
+            <div class="field-photo">
+              <label for="photo">Profile Image</label>
+              <div>
+                <span><img src="{{ asset('assets/d.png') }}"></span>
+                <input class="photo" name="photo"  accept="image/*" type="file">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="website-url">Website Url</label>
+              <input type="text" placeholder="https://yoursite.com" name="website-url">
+            </div>
+
+            <div class="field">
+              <label for="bio">Bio</label>
+              <textarea maxlength="200" rows="3" type="text" name="bio">Apenas um carinha que gosta de codigos e poesia
+              </textarea>
+            </div>
+
+            <div class="field">
+              <label for="location">Location</label>
+              <input type="text" placeholder="" value="São Paulo, Brasil" name="location">
+            </div>
+            
+            <div class="field">
+              <label for="twitter-user">Twitter User</label>
+              <input type="text" placeholder="@youruser" value="@danitw16" name="twitter-user">
+            </div>
+           
+            <div class="field">
+              <label for="getting">I'm getting into</label>
+              <textarea maxlength="200" rows="3" type="text" name="getting">Go</textarea>
+            </div>
+
+            <div class="field">
+              <label for="my-projects">My Projects</label>
+              <textarea maxlength="200" rows="3" type="text" name="my-projects">
+              </textarea>
+            </div>
+
+            <div class="field">
+              <label for="avaliable">Available for</label>
+              <textarea maxlength="200" rows="3" type="text" name="avaliable">New projects and open source
+              </textarea>
+            </div>
+            
+            <a href="#" type="submit" class="btn btn-primary write-post">
+              Save
+            </a>
+
           </form>
         </div>
       </div>
-
-
-
     </main>
 
   </div>

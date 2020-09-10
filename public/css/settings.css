@@ -95,9 +95,10 @@ main div {
   flex-direction: column;
   padding: 0;
   font-size: 1rem;
+  margin-bottom: 25px;
 }
 
-.field label {
+.field label, .field-photo label {
   margin: 0;
   color: rgb(32, 36, 40);
   font-weight: bold;
@@ -110,4 +111,52 @@ main div {
   border-radius: 5px;
   background-color: rgb(249, 250, 250);
   border: 1px solid rgb(181, 189, 196);
+}
+
+.field-photo {
+  display: flex;
+  padding: 0;
+  /* flex-direction: row; */
+  flex-flow: column;
+  margin-bottom: 25px;
+}
+
+.field-photo div {
+  display: flex;
+  padding: 0;
+  align-items: center;
+}
+
+.field-photo div span {
+  height: 48px;
+}
+
+.field-photo div span img {
+  border-radius: 100%;
+  width: 100%;
+  height: 48px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.field-photo div span {
+  border-radius: 100%;
+}
+
+.field-photo div input {
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(249, 250, 250);
+  border-radius: 5px;
+  box-shadow: rgba(8, 9, 10, 0.05) 0px 0px 0px 1px;
+}
+
+.field textarea {
+  margin-top: -8px;
+  width: 100%;
+  height: 160px;
+  border-radius: 5px;
+  border: 1px solid rgb(181, 189, 196);
+  background: rgb(249, 250, 250);
+  padding: 7px 8px 7px 8px;
 }
