@@ -72,7 +72,14 @@
           </nav>
         </div>
       
-        <div class="content">b</div>
+        <div class="content">
+          <form action="#" method="post">
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" placeholder="danieldesa@gmail.com" value="twz3xc21@gmail.com" name="email">
+            </div>
+          </form>
+        </div>
       </div>
 
 
