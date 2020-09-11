@@ -145,9 +145,9 @@
                         {{ $post->title }}
                       </a>
                     </h2>
-                    <div class="hashtag">
+                    <!-- <div class="hashtag">
                       <a href="#">{{ $post->tag }}</a>
-                    </div>
+                    </div> -->
 
                     <div class="reactions">
                       <div class="react">

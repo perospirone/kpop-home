@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model {
 	protected $table = 'publications';
-	protected $fillable = ['title', 'tag', 'path_cover_image', 'path_image', 'content', 'creator_id', 'num_likes', 'num_comments'];
+	protected $fillable = ['title', 'tags', 'path_cover_image', 'path_image', 'content', 'creator_id', 'num_likes', 'num_comments'];
 
   public function relUsers() {
 	  return $this->hasOne('App\User', 'id', 'creator_id');

@@ -47,9 +47,9 @@
               <input name="title" placeholder="New post title here..." required>
             </div>
 
-            <div class="tags">
+            <!-- <div class="tags">
               <input name="tags"  placeholder="Add up to 4 tags..." required>
-            </div>
+            </div> -->
           </div>
 
           <div class="text-padding">
@@ -65,7 +65,7 @@
         </div>
 
         <div class="trick">
-          Use markdown pow, fica daora
+
         </div>
 
         <div class="footer">

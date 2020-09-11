@@ -18,7 +18,7 @@ use App\User;
 
     public function create(Request $req) {
       $title = $req->title;
-      $tag = $req->tags;
+      $tags = null;
       $content = $req->content;
 
       $path_cover_image;
@@ -38,7 +38,7 @@ use App\User;
 
       $id = auth()->user()->id;
 
-      $this->objPost->create(['title' => $title, 'tag' => $tag, 'content' => $content, 'path_cover_image' => $path_cover_image, 'path_image' => $path_image, 'creator_id' => $id, 'num_likes' => 0, 'num_comments' => 0]);
+      $this->objPost->create(['title' => $title, 'tags' => $tags, 'content' => $content, 'path_cover_image' => $path_cover_image, 'path_image' => $path_image, 'creator_id' => $id, 'num_likes' => 0, 'num_comments' => 0]);
 
       return redirect('/home');
 
