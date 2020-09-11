@@ -21,6 +21,5 @@
         "sass": "^1.15.2",
         "sass-loader": "^10.0.2",
         "vue-template-compiler": "^2.6.12"
-
     }
 }
