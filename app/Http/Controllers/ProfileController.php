@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 use App\Models\Post;
 use App\Models\Like;
 
@@ -13,15 +14,21 @@ class ProfileController extends Controller {
 
 
   public function show($username) {
-    $id = auth()->user()->id; 
+    $id = auth()->user()->id;
 
-    $posts_user = Post::where(['creator_id' => $id ])->get();
+    $usr = User::where(['id' => $id])->get();
+    // dd($user[0]);
+    // var_dump($user);
+    $user = $usr[0];
+
+
+    $posts_user = Post::where(['creator_id' => $id ])->orderBy('id', 'desc')->get();
 
     $allLikes = Like::where(['id_user' => $id])->get();
 
 
     // dd($posts_user);
 
-		return view('profile', ['posts' => $posts_user, 'likes' => $allLikes]);
+		return view('profile', ['posts' => $posts_user, 'likes' => $allLikes, 'user' => $user]);
 	}
 }
