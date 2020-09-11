@@ -97,10 +97,10 @@
               </div>
             </div>
 
-            <div class="field">
-              <label for="website-url">Website Url</label>
-              <input type="text" placeholder="https://yoursite.com" name="website-url">
-            </div>
+            <!-- <div class="field">
+              <label for="fandom">Fandom</label>
+              <input type="text" placeholder="" name="fandom">
+            </div> -->
 
             <div class="field">
               <label for="bio">Bio</label>
@@ -117,8 +117,29 @@
               <label for="twitter-user">Twitter User</label>
               <input type="text" placeholder="@youruser" value="@danitw16" name="twitter-user">
             </div>
-           
+
             <div class="field">
+              <label for="fandom">Fandom</label>
+              <input type="text" placeholder="army" name="fandom">
+            </div>
+           
+             <div class="field">
+              <label for="stan">Stan</label>
+              <input type="text" placeholder="" name="stan">
+            </div>
+
+            <div class="field">
+              <label for="ultimate">Ultimate</label>
+              <input type="text" placeholder="" name="ultimate">
+            </div>
+
+            <div class="field">
+              <label for="bias">Bias</label>
+              <input type="text" placeholder="" name="bias">
+            </div>
+           
+
+            <!-- <div class="field">
               <label for="getting">I'm getting into</label>
               <textarea maxlength="200" rows="3" type="text" name="getting">Go</textarea>
             </div>
@@ -133,7 +154,7 @@
               <label for="avaliable">Available for</label>
               <textarea maxlength="200" rows="3" type="text" name="avaliable">New projects and open source
               </textarea>
-            </div>
+            </div> -->
             
             <a href="#" type="submit" class="btn btn-primary write-post">
               Save
