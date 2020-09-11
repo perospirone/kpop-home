@@ -67,9 +67,27 @@
             <span class="info-create">
               <i class="fas fa-birthday-cake"></i>
               Entrou em {{ $user->created_at  }} </span>
-            <a href="#" class="icon-twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
+
+            @php
+            $semtt = false;
+
+            if($user->twitter_user === null) {
+                $semtt = true;
+            } else {
+              $semtt = false;
+              $usertt = "https://twitter.com/@" . $user->twitter_user;
+
+            }
+            @endphp
+
+            @if($semtt)
+
+            @else
+              <a href="{{ $usertt  }}" class="icon-twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            @endif
+
           </div>
         </div>
         <div class="status">
