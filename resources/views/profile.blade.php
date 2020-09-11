@@ -57,16 +57,16 @@
           Settings
         </a>
         <div class="descr">
-          <h1>Daniel de Sá</h1>
-          <p>Apenas um cara q gosta de codigos e poesia</p>
+          <h1>{{ $user->name }}</h1>
+          <p>{{ $user->bio }}</p>
 
           <div class="infos">
             <span class="info-local">
               <i class="fas fa-map-marker-alt"></i>
-              São Paulo, Brasil</span>
+              {{ $user->estado  }}, {{ $user->pais }}</span>
             <span class="info-create">
               <i class="fas fa-birthday-cake"></i>
-              Joined on 20 de março de 2020 </span>
+              Entrou em {{ $user->created_at  }} </span>
             <a href="#" class="icon-twitter">
               <i class="fab fa-twitter"></i>
             </a>
