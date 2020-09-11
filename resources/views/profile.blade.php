@@ -87,16 +87,34 @@
                 <i class="fab fa-twitter"></i>
               </a>
             @endif
+          </div>
+        </div>
 
+        @php
+        $sem_status = false;
+
+        if($user->status === null) {
+          $sem_status = true;
+        } else {
+          $sem_status = false;
+        }
+        @endphp
+        @if($sem_status)
+          <div class="status">
+            <div>
+            </div>
           </div>
-        </div>
-        <div class="status">
-          <div>
-            <strong>Status</strong>
-            <p>Estudando</p>
-          </div>
-        </div>
       </div>
+        @else
+          <div class="status">
+            <div>
+              <strong>Status</strong>
+              <p>{{ $user->status }}</p>
+            </div>
+          </div>
+      </div>
+        @endif
+
 
       <div class="sidebar">
         <div class="user-sidebar">
