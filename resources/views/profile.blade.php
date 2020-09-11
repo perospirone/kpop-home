@@ -62,7 +62,7 @@
 
           <div class="infos">
             <span class="info-local">
-              <i class="fas fa-map-marker-alt" width="24px" height="24px"></i>
+              <i class="fas fa-map-marker-alt"></i>
               São Paulo, Brasil</span>
             <span class="info-create">
               <i class="fas fa-birthday-cake"></i>
@@ -84,42 +84,50 @@
         <div class="user-sidebar">
           <div class="widget">
             <header>
-              <h4>Skills/Languages</h4>
+              <h4>Fandom</h4>
             </header>
             <div class="widget-body">
-              <p>Js, Nodejs, PHP</p>
+              <p>{{ $user->fandom }}</p>
             </div>
           </div>
 
           <div class="widget">
             <header>
-              <h4>Learning/Trying</h4>
+              <h4>Stan</h4>
             </header>
             <div class="widget-body">
-              <p>Go</p>
+              <p>{{ $user->stan }}</p>
             </div>
           </div>
 
           <div class="widget">
             <header>
-              <h4>Avaiable for</h4>
+              <h4>Ultimate</h4>
             </header>
             <div class="widget-body">
-              <p>Projects</p>
+              <p>{{ $user->ultimate  }}</p>
+            </div>
+          </div>
+
+          <div class="widget">
+            <header>
+              <h4>Bias</h4>
+            </header>
+            <div class="widget-body">
+              <p>{{ $user->bias }} </p>
             </div>
           </div>
 
           <div class="sidebar-data">
-            <div>0 Posts Published</div>
+            <div> {{  sizeof($posts) }} Posts Published</div>
             <div>0 Comments Written</div>
-            <div>35 Tags Followed</div>
+            <!-- <div>35 Tags Followed</div> -->
           </div>
 
         </div>
 
         <div class="posts-user">
           <div class="posts">
-
             @foreach ($posts as $post)
             @php
             $deulike = false;
@@ -129,7 +137,7 @@
               @if($post->path_cover_image === null)
 
               @else
-              <img src="{{ asset('storage/' . $post->path_cover_image) }}">
+                <img src="{{ asset('storage/' . $post->path_cover_image) }}">
               @endif
 
               <div class="details-post">
