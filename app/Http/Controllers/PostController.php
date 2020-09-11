@@ -46,7 +46,7 @@ use App\User;
 
     // Metodo pra mostrar todos os posts na pagina inicial
     public function index() {
-      $allPosts = Post::all();
+      $allPosts = Post::all()->sortByDesc("id");
 
       $user = auth()->user()->id;
 
