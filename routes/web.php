@@ -30,5 +30,5 @@ Route::post('/posts/{id}', 'PostController@addLikes');
 Route::get('/profile/{username}', 'ProfileController@show');
 
 Route::get('/settings', 'SettingsController@index')->name('settings');
-Route::post('/settings', 'SettingsController@update')->name('settings.update');
+Route::put('/settings', 'SettingsController@update')->name('settings.update');
 

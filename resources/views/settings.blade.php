@@ -75,6 +75,7 @@
       
         <div class="content">
           <form action="{{ URL::route('settings.update') }}" method="post" enctype="multipart/form-data">
+            @method('PUT')
             @csrf
             <div class="field">
               <label for="email">Email</label>
