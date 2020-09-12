@@ -40,7 +40,7 @@
           <div class="text-padding">
             <button type="button" class="cover-imagebtn">
               Add a cover image
-              <input name="cover-image" type="file">
+              <input name="cover-image" accept="image/*" type="file">
             </button>
             <div class="title">
               <!-- <textarea type="text" placeholder="New post title here..." ></textarea> -->
@@ -53,13 +53,13 @@
           </div>
 
           <div class="text-padding">
-            <div class="upload-image">
+            <!-- <div class="upload-image">
               <button type="button" class="btn">
                 <i class="fas fa-image"></i>
                 Upload image   
                 <input type="file" name="image">
               </button>
-            </div>
+            </div> -->
             <textarea class="write-content" name="content"  placeholder="Write your post content here..." required></textarea>
           </div>
         </div>
