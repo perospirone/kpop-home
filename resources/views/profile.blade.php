@@ -100,7 +100,7 @@
         }
         @endphp
         @if($sem_status)
-          <div class="status">
+          <div class="status" style="border:0;">
             <div>
             </div>
           </div>
