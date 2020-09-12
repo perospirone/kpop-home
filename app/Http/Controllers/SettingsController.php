@@ -37,6 +37,19 @@ class SettingsController extends Controller {
     $usr->ultimate      =	$req->ultimate;
     $usr->bias          =	$req->bias;
 
+
+    $path_profile_image;
+
+    if($req->file('photo') === null) {
+    
+    } elseif($req->file('photo')->isValid()) {
+      $path_profile_image = $req->file('photo')->store("public/images/profile/$id");
+      $path_profile_image = str_replace('public/', '', $path_profile_image);
+      $usr->path_profile_image = $path_profile_image;
+    }
+
+
+
     $usr->save();
 
     return redirect('settings');

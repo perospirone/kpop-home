@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -64,7 +62,7 @@
             <div class="field-photo">
               <label for="photo">Profile Image</label>
               <div>
-                <span><img src="{{ asset('assets/d.png') }}"></span>
+                <span><img src="{{ asset('storage/' . $user->path_profile_image ) }}"></span>
                 <input class="photo" name="photo"  accept="image/*" type="file">
               </div>
             </div>

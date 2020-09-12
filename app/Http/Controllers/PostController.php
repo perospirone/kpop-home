@@ -28,7 +28,7 @@ use App\User;
         $path_cover_image = null;
       } elseif($req->file('cover-image')->isValid()) {
         $path_cover_image = $req->file('cover-image')->store('public/images');
-        $path_cover_image = str_replace('public', '', $path_cover_image);
+        $path_cover_image = str_replace('public/', '', $path_cover_image);
 
       }
 
@@ -36,7 +36,7 @@ use App\User;
         $path_image = null;
       } elseif($req->file('image')->isValid()) {
         $path_image = $req->file('image')->store('public/images');
-        $path_image = str_replace('public', '', $path_image);
+        $path_image = str_replace('public/', '', $path_image);
       }
 
       $id = auth()->user()->id;
@@ -51,11 +51,17 @@ use App\User;
     public function index() {
       $allPosts = Post::all()->sortByDesc("id");
 
-      $user = auth()->user()->id;
+      $id = auth()->user()->id;
 
-      $allLikes = Like::where(['id_user' => $user])->get();
 
-      return view('home', ['posts' => $allPosts, 'likes' => $allLikes]);
+      $usr = User::where(['id' => $id])->get();
+      // dd($user[0]);
+      // var_dump($user);
+      $user = $usr[0];
+
+      $allLikes = Like::where(['id_user' => $id])->get();
+
+      return view('home', ['posts' => $allPosts, 'likes' => $allLikes, 'user' => $user]);
     }
 
     public function addLikes($id, Request $req) {

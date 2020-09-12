@@ -23,7 +23,7 @@
           </a>
           <div class="menu-profile">
             <a href="{{ URL::to('/profile/' . auth()->user()->username ) }}">
-              <img src="{{ asset('assets/d.png') }}"></img>
+              <img src="{{ asset('storage/' . $user->path_profile_image ) }}"></img>
             </a>
           </div>
 
