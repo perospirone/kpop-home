@@ -27,6 +27,8 @@
           Settings
         </a>
         <div class="descr">
+          <img src="{{ asset('storage/' . $user->path_profile_image ) }}" width="150" height="150">
+
           <h1>{{ $user->name }}</h1>
           <p>{{ $user->bio }}</p>
 

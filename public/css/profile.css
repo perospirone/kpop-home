@@ -50,6 +50,12 @@ main .profile .write-post {
   padding-top: 0 !important;
 }
 
+.descr img {
+  border-radius: 100%;
+  margin-top: -100px;
+  margin-bottom: 20px;
+}
+
 .descr h1 {
   color: rgb(8, 9, 10);
   font-size: 30px;
