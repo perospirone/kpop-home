@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +29,7 @@
           </div>
 
           <div class="search-box">
-            <form class="" action="#" method="get">
+            <form action="#" method="get">
               <input type="text" name="" value="" placeholder="Pesquisar">
             </form>
           </div>
@@ -61,7 +62,7 @@
       <div>
         <div class="sidebar-left">
           <nav>
-            <a href="#">Profile</a>
+            <a href="#" active >Profile</a>
             <a href="#">UX</a>
             <a href="#">Integrations</a>
             <a href="#">Notifications</a>
@@ -73,20 +74,21 @@
         </div>
       
         <div class="content">
-          <form action="#" method="post" enctype="multipart/form-data">
+          <form action="{{ URL::route('settings.update') }}" method="post" enctype="multipart/form-data">
+            @csrf
             <div class="field">
               <label for="email">Email</label>
-              <input type="email" placeholder="danieldesa@gmail.com" value="twz3xc21@gmail.com" name="email">
+              <input type="email" placeholder="youremail@gmail.com" value="{{ $user->email }}" name="email">
             </div>
 
             <div class="field">
               <label for="username">Username</label>
-              <input type="text" placeholder="danitw" value="danitw" name="username">
+              <input type="text" placeholder="danitw" value="{{ $user->username }}" name="username">
             </div>
 
             <div class="field">
               <label for="name">Name</label>
-              <input type="text" placeholder="Daniel" value="Daniel" name="name">
+              <input type="text" placeholder="Daniel" value="{{ $user->name }}" name="name">
             </div>
 
             <div class="field-photo">
@@ -104,38 +106,47 @@
 
             <div class="field">
               <label for="bio">Bio</label>
-              <textarea maxlength="200" rows="3" type="text" name="bio">Apenas um carinha que gosta de codigos e poesia
-              </textarea>
+              <textarea maxlength="200" rows="3" type="text" name="bio">{{ $user->bio }}</textarea>
             </div>
 
             <div class="field">
-              <label for="location">Location</label>
-              <input type="text" placeholder="" value="São Paulo, Brasil" name="location">
+              <label for="status">Status</label>
+              <input type="text" placeholder="No que você esta pensando agora?" value="{{ $user->status }}" name="status">
+            </div>
+
+            <div class="field">
+              <label for="pais">Pais</label>
+              <input type="text" placeholder="Brasil" value="{{ $user->pais }}" name="pais">
+            </div>
+
+            <div class="field">
+              <label for="estado">Estado</label>
+              <input type="text" placeholder="São Paulo" value="{{ $user->estado }}" name="estado">
             </div>
             
             <div class="field">
-              <label for="twitter-user">Twitter User</label>
-              <input type="text" placeholder="@youruser" value="@danitw16" name="twitter-user">
+              <label for="twitter_user">Twitter User</label>
+              <input type="text" placeholder="@youruser" value="{{ $user->twitter_user }}" name="twitter_user">
             </div>
 
             <div class="field">
               <label for="fandom">Fandom</label>
-              <input type="text" placeholder="army" name="fandom">
+              <input type="text" placeholder="army" value="{{ $user->fandom }}" name="fandom">
             </div>
            
              <div class="field">
               <label for="stan">Stan</label>
-              <input type="text" placeholder="" name="stan">
+              <input type="text" placeholder="" value="{{ $user->stan }}" name="stan">
             </div>
 
             <div class="field">
               <label for="ultimate">Ultimate</label>
-              <input type="text" placeholder="" name="ultimate">
+              <input type="text" placeholder="jennie" value="{{ $user->ultimate }}" name="ultimate">
             </div>
 
             <div class="field">
               <label for="bias">Bias</label>
-              <input type="text" placeholder="" name="bias">
+              <input type="text" placeholder="" value="{{ $user->ultimate }}" name="bias">
             </div>
            
 
@@ -156,9 +167,9 @@
               </textarea>
             </div> -->
             
-            <a href="#" type="submit" class="btn btn-primary write-post">
+            <button type="submit" class="btn btn-primary write-post">
               Save
-            </a>
+            </button>
 
           </form>
         </div>
