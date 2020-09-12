@@ -54,6 +54,16 @@ header {
   align-items: center;
 }
 
+.logo a {
+  text-decoration: none;
+  color: rgb(33, 37, 41);
+}
+
+.logo a:hover {
+  text-decoration: none;
+  color: rgb(33, 37, 41)
+}
+
 .top-right{
   display: flex;
   align-items: center;

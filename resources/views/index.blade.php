@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Casa das Kpopers</title>
+    <title>Kpop Home</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <script src="https://kit.fontawesome.com/60e76d6bf1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -14,34 +14,7 @@
 </head>
 <body>
 <div class="mainContainer">
-    <header class="">
-        <div class="top-bar-container maxWidth">
-
-            <div class="flexDiv">
-                <div class="logo">
-                    Casa das Kpopers
-                </div>
-
-                <div class="search-box">
-                    <form class="" action="#" method="get">
-                        <input type="text" name="" value="" placeholder="Pesquisar">
-                    </form>
-                </div>
-            </div>
-
-            <div class="top-right">
-              <a href="{{ URL::route('new') }}" class="btn btn-primary write-post">
-                  Write a post
-                </a>
-                <a class="iconButton" href="#">
-                  <i class="far fa-bell"></i>
-                </a>
-                <a class="iconButton" href="#">
-                  <i class="fas fa-bars"></i>
-              </a>
-            </div>
-        </div>
-    </header>
+    @include('components.header')
 
     <main class="mainFlex maxWidth">
         <div class="column1 box">

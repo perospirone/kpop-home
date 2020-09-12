@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Casa das Kpopers</title>
+  <title>Kpop Home</title>
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/home.css') }}">
   <script src="https://kit.fontawesome.com/60e76d6bf1.js" crossorigin="anonymous"></script>
@@ -17,37 +17,7 @@
 </head>
 <body>
   <div class="mainContainer">
-    <header class="">
-      <div class="top-bar-container maxWidth">
-
-        <div class="flexDiv">
-          <div class="logo">
-            Casa das Kpopers
-          </div>
-
-          <div class="search-box">
-            <form class="" action="#" method="get">
-              <input type="text" name="" value="" placeholder="Pesquisar">
-            </form>
-          </div>
-        </div>
-
-        <div class="top-right">
-          <a href="{{ URL::route('new') }}" class="btn btn-primary write-post">
-            Write a post
-          </a>
-          <a class="iconButton" href="#">
-            <i class="far fa-bell"></i>
-          </a>
-          <div class="menu-profile">
-            <a href="{{ URL::to('/profile/' . auth()->user()->username ) }}">
-              <img src="{{ asset('assets/d.png') }}"></img>
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </header>
+    @include('components.header')
 
     <main class="mainFlex maxWidth">
       <div class="column1 box">
