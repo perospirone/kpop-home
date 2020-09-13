@@ -12,22 +12,15 @@ class ProfileController extends Controller {
     $this->middleware('auth');
   }
 
-
   public function show($username) {
     $id = auth()->user()->id;
 
     $usr = User::where(['id' => $id])->get();
-    // dd($user[0]);
-    // var_dump($user);
     $user = $usr[0];
-
 
     $posts_user = Post::where(['creator_id' => $id ])->orderBy('id', 'desc')->get();
 
     $allLikes = Like::where(['id_user' => $id])->get();
-
-
-    // dd($posts_user);
 
 		return view('profile', ['posts' => $posts_user, 'likes' => $allLikes, 'user' => $user]);
 	}
