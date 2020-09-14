@@ -46,11 +46,71 @@
 
 .column2 {
   width: 606px;
+  padding: 0;
 }
 
-.column2 {
-  
+.column2 img {
+  width: 100%;
+  height: 338px;
+  border-radius: 5px;
 }
+
+.description {
+  padding: 32px 64px 0 64px;
+}
+
+.description h1 {
+  margin-bottom: 16px;
+  color :rgb(8, 9, 10);
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.description div {
+  color: rgb(100, 112, 125);
+  display: flex;
+  align-items: center;
+}
+
+.description a {
+  /* margin-right: 16px; */
+  font-size: 16px;
+  color: rgb(32, 36, 40);
+  align-items: center;
+  text-align: center;
+}
+/* .description span {
+  padding: 8px;
+  align-items: center;
+} */
+
+.description time {
+  color: rgb(100, 112, 125);
+  font-size: 14px;
+  padding: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .column3 {
 

@@ -29,6 +29,18 @@
             </div>
             <div class="column2 box">
               <img src="{{ asset('assets/download.jpeg') }}">
+              <div class="description">
+                <h1>Deno é uma merda</h1>
+
+                <div>
+                  <!-- adicionar a foto do criador do post aqui depois -->
+                  <a href="#">Daniel de Sá</a>
+                  <time datetime="2007-08-29T13:58Z">
+                    August 29th, 2007 at 13:58
+                  </time>
+              
+                </div>
+              </div>
             
             </div>
             <div class="column3 box"></div>
