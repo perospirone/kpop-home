@@ -1,0 +1,57 @@
+.column1, .column2, .column3 {
+  height: 80vh;
+  background-color: white;
+}
+
+.column1 {
+  margin-left: -20px;
+  width: 64px;
+  margin-right: 10px;
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  padding-top: 20px;
+
+}
+
+.like {
+  width: 100%;
+  height: 61px !important;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  color: rgb(54, 61, 68);
+  border-radius: 5px;
+}
+
+.like:hover {
+  background: #e2e4e5;
+}
+
+.like span {
+  color: rgb(77, 87, 96);
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.core {
+  font-size: 22px !important;
+  color: rgb(54, 61, 68) !important;
+}
+
+.column2 {
+  width: 606px;
+}
+
+.column2 {
+  
+}
+
+.column3 {
+
+}

@@ -53,15 +53,28 @@ use App\User;
 
       $id = auth()->user()->id;
 
-
       $usr = User::where(['id' => $id])->get();
-      // dd($user[0]);
-      // var_dump($user);
+
       $user = $usr[0];
 
       $allLikes = Like::where(['id_user' => $id])->get();
 
       return view('home', ['posts' => $allPosts, 'likes' => $allLikes, 'user' => $user]);
+    }
+
+    public function show($id) {
+      $id_user = auth()->user()->id;
+
+      $usr = User::where(['id' => $id_user])->get();
+      $user = $usr[0];
+
+      $pst = Post::where(['id' => $id])->get();
+      $post = $pst[0];
+      // dd($post->id);
+
+      $allLikes = Like::where(['id_user' => $id])->get();
+
+      return view('post', ['user' => $user, 'post' => $post, 'likes' => $allLikes]);
     }
 
     public function addLikes($id, Request $req) {

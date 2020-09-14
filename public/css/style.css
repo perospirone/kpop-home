@@ -94,14 +94,10 @@ header {
   justify-content: space-between;
 }
 
-.mainFlex > div {
-  /* border: 1px solid black; */
-}
-
 .box {
   border-radius: 5px;
   background-color: white;
-  padding:5px;
+  padding: 5px;
 }
 
 .column1 {
@@ -166,10 +162,6 @@ header {
   width: 200px;
   max-height: 420px;
   display: block;
-}
-
-.anuncio {
-  /*background: red;*/
 }
 
 .column2 {
@@ -440,7 +432,7 @@ header {
   padding: 12px 16px;
   height: 52px;
   font-size: 16px;
-  color: rgb(32, 36, 40);]
+  color: rgb(32, 36, 40);
   margin-bottom: 1px;
   border-bottom: 1px solid #eef0f1;
 }
@@ -495,7 +487,7 @@ header {
   padding: 12px 16px;
   height: 52px;
   font-size: 16px;
-  color: rgb(32, 36, 40);]
+  color: rgb(32, 36, 40);
   margin-bottom: 1px;
   border-bottom: 1px solid #eef0f1;
 }

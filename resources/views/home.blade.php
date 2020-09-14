@@ -143,7 +143,7 @@
                         </a>
                       </div>
                       <div class="react2">
-                        <!-- <small>{{$post->time_read}} min read</small> -->
+                        <!-- <small> {{$post->time_read}} min read</small> -->
                         <button type="button" class="btn btn-light">Save</button>
                       </div>
 
