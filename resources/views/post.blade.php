@@ -46,7 +46,15 @@
               </div>
             
             </div>
-            <div class="column3 box"></div>
+            <div class="column3">
+              <div class="creator-profile">
+                <div class="black"></div>
+                <span class="img-profile">
+                  <img src="{{ asset('assets/download.jpeg') }}">
+
+                </span>
+              </div>
+            </div>
 
         </main>
     </div>
