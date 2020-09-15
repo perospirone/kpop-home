@@ -49,10 +49,12 @@
             <div class="column3">
               <div class="creator-profile">
                 <div class="black"></div>
-                <span class="img-profile">
-                  <img src="{{ asset('assets/download.jpeg') }}">
-
-                </span>
+                <a href="#">
+                  <span class="img-profile">
+                    <img src="{{ asset('assets/download.jpeg') }}">
+                  </span>
+                  <span class="name-creator">Daniel de Sá</span>
+                </a>
               </div>
             </div>
 

@@ -1,4 +1,4 @@
-.column1, .column2, .column3 {
+.column1, .column2 {
   height: 80vh;
   background-color: white;
 }
@@ -102,7 +102,10 @@
 }
 
 .creator-profile {
-  background-color:rgb(249, 250, 250);
+  background-color: rgb(249, 250, 250);
+  height: 300px;
+  border-bottom: 1px solid #c5c5c5;
+  border-radius: 5px;
 }
 
 .black {
@@ -110,6 +113,11 @@
   width: 100%;
   height: 30px;
   border-radius: 5px 5px 0 0;
+}
+
+.creator-profile a:hover {
+  color: rgb(50, 62, 190);
+  text-decoration: none;
 }
 
 .img-profile {
@@ -126,4 +134,15 @@
   height: 48px;
   margin-top: -15px;
   border-bottom: 1px solid #c5c5c5;
+}
+
+.name-creator {
+  margin-left: 5px;
+  color: rgb(32, 36, 40);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.name-creator:hover {
+  color: rgb(50, 62, 190);
 }
