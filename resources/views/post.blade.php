@@ -55,6 +55,37 @@
                   </span>
                   <span class="name-creator">Daniel de Sá</span>
                 </a>
+
+                <div class="biography">
+                  Apenas alguem que gosta de codigos e poesia
+                </div>
+               
+                <div class="follow">
+                  <button class="btn btn-primary write-post">
+                    Follow
+                  </button>
+                </div>
+
+                <div class="user-details">
+                  <ul>
+                    <li>
+                      <div class="key">Status</div>
+                      <div class="value">Estudando</div>
+                    </li>
+
+                    <li>
+                      <div class="key">Localização</div>
+                      <div class="value">São Paulo, Brasil</div>
+                    </li>
+
+                    <li>
+                      <div class="key">Entrou</div>
+                      <div class="value last">Hoje as 26:90 horas</div>
+                    </li>
+
+                  </ul>
+                </div>
+              
               </div>
             </div>
 
