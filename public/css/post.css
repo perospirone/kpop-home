@@ -57,6 +57,7 @@
 
 .description {
   padding: 32px 64px 0 64px;
+  background: white;
 }
 
 .description h1 {
@@ -93,6 +94,7 @@
 .content {
   width: 100%;
   padding: 32px 64px;
+  background: white;
 }
 
 .column3 {
