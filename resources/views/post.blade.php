@@ -45,6 +45,21 @@
                 asklsadjkldsadjklsa
               </div>
             
+              <div class="comments">
+                <div class="user-comment">
+                  <form action="#" method="post">
+                    <header>
+                      <h3>Comentarios</h3>
+                      <button class="btn btn-light">Acompanhe a treta</button>
+                    </header>
+                    <textarea name="comment">Escreva seu comentario aqui</textarea>
+                    <button class="btn btn-primary">SUBMIT</button>
+                  </form>
+                </div>
+
+              </div>
+
+
             </div>
             <div class="column3">
               <div class="creator-profile">
