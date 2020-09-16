@@ -201,6 +201,10 @@
   padding: 32px 64px;
 }
 
+.user-comment form {
+  height: 211px;
+}
+
 .user-comment form textarea {
   width: 100%;
   height: 111px;
@@ -227,6 +231,61 @@
   margin: 0;
 }
 
-.user-comment button {
+.f a {
   float: right;
+}
+
+.comentarios {
+  margin-top: 20px;
+}
+
+.comentarios .comment {
+  width: 100%;
+  border: 1px solid rgb(219, 219, 219);
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+}
+
+.detail .user-c {
+  color: rgb(59, 59, 59);
+  font-size: 20px;
+}
+
+.date-comment {
+  color: rgb(100, 112, 125);
+  font-size: 12px;
+}
+
+.content-comment {
+  padding: 10px;
+  color: rgb(8, 9, 10);
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+
+.comment {
+  position: relative;
+}
+
+.comment footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.comment footer a {
+  margin-top: 20px;
+}
+
+.comment footer .r {
+  color: rgb(59, 73, 223);
 }

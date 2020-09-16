@@ -50,11 +50,37 @@
                   <form action="#" method="post">
                     <header>
                       <h3>Comentarios</h3>
-                      <button class="btn btn-light">Acompanhe a treta</button>
+                      <button type="button" class="btn btn-light">Acompanhe a treta</button>
                     </header>
                     <textarea name="comment">Escreva seu comentario aqui</textarea>
-                    <button class="btn btn-primary">SUBMIT</button>
+                    <div class="f">
+                      <a type="submit" class="btn btn-primary">SUBMIT</a>
+                    </div>
                   </form>
+                </div>
+
+                <div class="comentarios">
+                  <div class="comment">
+                    <div class="detail">
+                      <span class="user-c">
+                        Daniel de Sá
+                      </span>
+                      <span class="date-comment">
+                        13 de Setembro 
+                      </span>
+                    </div>
+                  
+                    <div class="content-comment">
+                      sadkljsakldsaklsadklsdaklsadklsdakldsajkldsakldsajkldsajlk
+                    </div>
+
+                    <footer>
+                      <a href="#">Coração <span>10</span></a>
+
+                      <a class="r" href="#">REPLY</a>
+                    </footer>
+                  </div>
+
                 </div>
 
               </div>
