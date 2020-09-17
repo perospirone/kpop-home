@@ -60,26 +60,38 @@
                 </div>
 
                 <div class="comentarios">
-                  <div class="comment">
-                    <div class="detail">
-                      <span class="user-c">
-                        Daniel de Sá
-                      </span>
-                      <span class="date-comment">
-                        13 de Setembro 
-                      </span>
-                    </div>
-                  
-                    <div class="content-comment">
-                      sadkljsakldsaklsadklsdaklsadklsdakldsajkldsakldsajkldsajlk
+                  <div>
+                    <header>
+                      <a>Daniel</a>
+                      <p>13 Sept</p>
+                    </header>
+                    <div class="body-comment">
+                      <p>
+                        saddmajkdsahjkdsahjkdsasad
+                        saddmajkdsahjkdsahjkdsasad
+                        saddmajkdsahjkdsahjkdsasad
+                        saddmajkdsahjkdsahjkdsasad
+                        saddmajkdsahjkdsahjkdsasad
+                        saddmajkdsahjkdsahjkdsasad
+                        saddmajkdsahjkdsahjkdsasad
+                        saddmajkdsahjkdsahjkdsasad
+                        saddmajkdsahjkdsahjkdsasad
+                        saddmajkdsahjkdsahjkdsasad
+                        saddmajkdsahjkdsahjkdsasad
+                        saddmajkdsahjkdsahjkdsasad
+                        saddmajkdsahjkdsahjkdsasad
+                        saddmajkdsahjkdsahjkdsasad
+                        saddmajkdsahjkdsahjkdsasad
+                      </p>
                     </div>
 
                     <footer>
-                      <a href="#">Coração <span>10</span></a>
-
-                      <a class="r" href="#">REPLY</a>
+                      <a class="corac">coracao <span>13</span></a>
+                      <a>REPLY</a>
                     </footer>
+
                   </div>
+
 
                 </div>
 
