@@ -63,15 +63,17 @@ use App\User;
     }
 
     public function show($id) {
-      $id_user = auth()->user()->id;
-
+      $pst = Post::where(['id' => $id])->get();
+      $post = $pst[0];
+      
+      $id_user = $post->creator_id; 
+      
       $usr = User::where(['id' => $id_user])->get();
       $user = $usr[0];
 
-      $pst = Post::where(['id' => $id])->get();
-      $post = $pst[0];
-      // dd($post->id);
-
+      $user->joined = date("d/m/Y H:i:s", strtotime($user->created_at)); 
+      
+      $post->data = date("d/m/Y H:i:s", strtotime($post->created_at));
       $allLikes = Like::where(['id_user' => $id])->get();
 
       return view('post', ['user' => $user, 'post' => $post, 'likes' => $allLikes]);

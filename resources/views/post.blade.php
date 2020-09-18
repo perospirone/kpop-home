@@ -14,7 +14,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <script src="{{ asset('js/script.js') }}"> </script>
+    <script src="{{ asset('js/script.js') }}"></script>
 </head>
 <body>
     <div class="mainContainer">
@@ -24,28 +24,28 @@
             <div class="column1 box">
               <a class="like" onclick="handleLike({{ auth()->user()->id }}, {{ $post->id }} )">
                 <i id="heart" class="far fa-heart core"></i>
-                <span>1</span>
+                <span>{{ $post->num_likes }}</span>
               </a>
             </div>
             <div class="column2 box">
-              <img src="{{ asset('assets/download.jpeg') }}">
+              <img src="{{ asset('storage/' . $post->path_cover_image) }}">
               <div class="description">
-                <h1>Deno é uma merda</h1>
+                <h1>{{ $post->title }}</h1>
 
                 <div>
                   <!-- adicionar a foto do criador do post aqui depois -->
-                  <a href="#">Daniel de Sá</a>
-                  <time datetime="2007-08-29T13:58Z">
-                    August 29th, 2007 at 13:58
+                  <a href="#">{{ $user->name }}</a>
+                  <time>
+                    {{ $post->data }}
                   </time>
                 </div>
               </div>
 
               <div class="content">
-                asklsadjkldsadjklsa
+                {{ $post->content }}
               </div>
             
-              <div class="comments">
+             <!-- <div class="comments">
                 <div class="user-comment">
                   <form action="#" method="post">
                     <header>
@@ -95,45 +95,49 @@
 
                 </div>
 
-              </div>
+             </div>-->
 
 
             </div>
             <div class="column3">
               <div class="creator-profile">
                 <div class="black"></div>
-                <a href="#">
+                <a href="{{ URL::route('profile', ['username' => $user->username])}}">
                   <span class="img-profile">
-                    <img src="{{ asset('assets/download.jpeg') }}">
+                    <img src="{{ asset('storage/'. $user->path_profile_image) }}">
                   </span>
-                  <span class="name-creator">Daniel de Sá</span>
+                  <span class="name-creator">{{ $user->name }}</span>
                 </a>
 
                 <div class="biography">
-                  Apenas alguem que gosta de codigos e poesia
+                  {{ $user->bio }}
                 </div>
                
-                <div class="follow">
+                <!-- <div class="follow">
                   <button class="btn btn-primary write-post">
                     Follow
                   </button>
-                </div>
+                </div> -->
 
                 <div class="user-details">
                   <ul>
-                    <li>
-                      <div class="key">Status</div>
-                      <div class="value">Estudando</div>
-                    </li>
+                    
+                    @if($user->status === null)
+                    @else
+                      <li>
+                        <div class="key">Status</div>
+                        <div class="value">{{ $user->status }}</div>
+                      </li>
+                    @endif
 
                     <li>
                       <div class="key">Localização</div>
-                      <div class="value">São Paulo, Brasil</div>
+                      <div class="value">{{ $user->estado }}, {{ $user->pais }}</div>
                     </li>
 
                     <li>
-                      <div class="key">Entrou</div>
-                      <div class="value last">Hoje as 26:90 horas</div>
+                      <div class="key">Entrou no dia</div>
+                      <div class="value last">{{ $user->joined }}</div>
                     </li>
 
                   </ul>
