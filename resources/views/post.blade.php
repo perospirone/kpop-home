@@ -28,7 +28,11 @@
               </a>
             </div>
             <div class="column2 box">
-              <img src="{{ asset('storage/' . $post->path_cover_image) }}">
+              @if($post->path_cover_image === null)
+              @else
+                <img src="{{ asset('storage/' . $post->path_cover_image) }}">
+              @endif
+
               <div class="description">
                 <h1>{{ $post->title }}</h1>
 
