@@ -42,9 +42,9 @@
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
           <a href="#">Link 4</a>
-        </div>-->
+        </div>
 
-        <!--- <div class="vertical-menu2">
+        <div class="vertical-menu2">
           <header class="separador">DESIGN YOUR EXPERIENCE</header>
 
           <navbar>
@@ -70,9 +70,9 @@
             <a href="#">#link 3</a>
             <a href="#">#link 4</a>
           </navbar>
-        </div> -->
+        </div>
 
-            <!-- <div class="anuncio"> 
+             <div class="anuncio"> 
               <h1>ANUNCIE AQUI DANIEL</h1>
             </div> -->
 
