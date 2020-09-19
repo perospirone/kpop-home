@@ -121,29 +121,29 @@
 
                     <div class="reactions">
                       <div class="react">
-                        <a class="like" onclick="handleLike({{ auth()->user()->id }}, {{ $post->id }} )">
+                        <a class="like" onclick="handleLike({{ auth()->user()->id }}, {{ $post->id }})">
                           @php
                             foreach($likes as $like) {
                               if($like->id_post == $post->id) {
                                 $deulike = true;
                               } 
                             }
-
                           @endphp
                           
-                          @if($deulike == true)
+                          @if($deulike === true)
                             <i id="heart{{ $post->id }}" class="fas fa-heart"></i> <span id="like{{ $post->id }}">{{ $post->num_likes }}</span> likes
                           @else
                             <i id="heart{{ $post->id }}" class="far fa-heart"></i> <span id="like{{ $post->id }}">{{ $post->num_likes }}</span> likes
                           @endif
                         </a>  
 
-                        <a class="comment">
+                        <!-- <a class="comment">
                           <i class="far fa-comment"></i> {{ $post->num_comments }} comments
-                        </a>
+                        </a> -->
+
                       </div>
                       <div class="react2">
-                        <!-- <small> {{$post->time_read}} min read</small> -->
+                        <!-- <small> {{ $post->time_read }} min read</small> -->
                         <button type="button" class="btn btn-light">Save</button>
                       </div>
 

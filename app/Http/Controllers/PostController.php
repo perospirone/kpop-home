@@ -29,7 +29,6 @@ use App\User;
       } elseif($req->file('cover-image')->isValid()) {
         $path_cover_image = $req->file('cover-image')->store('public/images');
         $path_cover_image = str_replace('public/', '', $path_cover_image);
-
       }
 
       if($req->file('image') === null) {
@@ -44,7 +43,6 @@ use App\User;
       $this->objPost->create(['title' => $title, 'tags' => $tags, 'content' => $content, 'path_cover_image' => $path_cover_image, 'path_image' => $path_image, 'creator_id' => $id, 'num_likes' => 0, 'num_comments' => 0]);
 
       return redirect('/home');
-
     }
 
     // Metodo pra mostrar todos os posts na pagina inicial
@@ -72,11 +70,21 @@ use App\User;
       $user = $usr[0];
 
       $user->joined = date("d/m/Y H:i:s", strtotime($user->created_at)); 
-      
       $post->data = date("d/m/Y H:i:s", strtotime($post->created_at));
-      $allLikes = Like::where(['id_user' => $id])->get();
 
-      return view('post', ['user' => $user, 'post' => $post, 'likes' => $allLikes]);
+      $like = Like::where(['id_user' => $id_user, 'id_post' => $id])->first();
+
+      if($like == null) {
+        $deulike = false;
+      } else {
+        $deulike = true;
+      }
+
+
+      // dd($like);
+      // dd($allLikes);
+
+      return view('post', ['user' => $user, 'post' => $post, 'like' => $deulike]);
     }
 
     public function addLikes($id, Request $req) {

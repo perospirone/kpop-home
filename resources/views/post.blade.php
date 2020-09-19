@@ -14,18 +14,25 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <script src="{{ asset('js/script.js') }}"></script>
+    <script src="{{ asset('js/post.js') }}"></script>
 </head>
 <body>
-    <div class="mainContainer">
-        @include('components.header')
+  <div class="mainContainer">
+    @include('components.header')
 
         <main class="mainFlex maxWidth">
             <div class="column1 box">
-              <a class="like" onclick="handleLike({{ auth()->user()->id }}, {{ $post->id }} )">
-                <i id="heart" class="far fa-heart core"></i>
-                <span>{{ $post->num_likes }}</span>
-              </a>
+              @if($like == true)
+                <a class="like" onclick="handleLike({{ auth()->user()->id }}, {{ $post->id }} )">
+                  <i id="heart" class="fas fa-heart core"></i>
+                  <span>{{ $post->num_likes }}</span>
+                </a>
+              @else
+                <a id="like" class="like" onclick="handleLike({{ auth()->user()->id }}, {{ $post->id }} )">
+                  <i id="heart" class="far fa-heart core"></i>
+                  <span id="likes">{{ $post->num_likes }}</span>
+                </a>
+              @endif
             </div>
             <div class="column2 box">
               @if($post->path_cover_image === null)
