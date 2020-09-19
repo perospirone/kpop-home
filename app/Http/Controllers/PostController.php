@@ -40,7 +40,9 @@ use App\User;
 
       $id = auth()->user()->id;
 
-      $post = $this->objPost->create(['title' => $title, 'tags' => $tags, 'content' => $content, 'path_cover_image' => $path_cover_image, 'path_image' => $path_image, 'creator_id' => $id, 'num_likes' => 0, 'num_comments' => 0]);
+      $name_author = auth()->user()->name;
+
+      $post = $this->objPost->create(['title' => $title, 'tags' => $tags, 'content' => $content, 'path_cover_image' => $path_cover_image, 'path_image' => $path_image, 'creator_id' => $id, 'num_likes' => 0, 'num_comments' => 0, 'name_author' => $name_author]);
 
       return redirect("/post/$post->id");
     }
