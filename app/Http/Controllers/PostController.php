@@ -40,9 +40,9 @@ use App\User;
 
       $id = auth()->user()->id;
 
-      $this->objPost->create(['title' => $title, 'tags' => $tags, 'content' => $content, 'path_cover_image' => $path_cover_image, 'path_image' => $path_image, 'creator_id' => $id, 'num_likes' => 0, 'num_comments' => 0]);
+      $post = $this->objPost->create(['title' => $title, 'tags' => $tags, 'content' => $content, 'path_cover_image' => $path_cover_image, 'path_image' => $path_image, 'creator_id' => $id, 'num_likes' => 0, 'num_comments' => 0]);
 
-      return redirect('/home');
+      return redirect("/post/$post->id");
     }
 
     // Metodo pra mostrar todos os posts na pagina inicial
@@ -79,10 +79,6 @@ use App\User;
       } else {
         $deulike = true;
       }
-
-
-      // dd($like);
-      // dd($allLikes);
 
       return view('post', ['user' => $user, 'post' => $post, 'like' => $deulike]);
     }
