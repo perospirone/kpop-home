@@ -94,7 +94,9 @@
 
               @foreach ($posts as $post)
               @php
-                $deulike = false;
+              $deulike = false;
+              
+              $data = date("d/m/Y H:i:s", strtotime($post->created_at));
               @endphp
 
               <div class="post">
@@ -106,7 +108,7 @@
                 
                 <div class="details-post">
                   <div class="autor-post">
-                    <a href="#" class="name">Daniel de Sá</a> <br> <a href="#" class="date">{{ $post->created_at }}</a>
+                    <a href="#" class="name">Daniel de Sá</a> <br> <a href="#" class="date">{{ $data }}</a>
                   </div>
 
                   <div class="title-post">

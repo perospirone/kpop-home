@@ -50,6 +50,7 @@
               $usertt = "https://twitter.com/@" . $user->twitter_user;
 
             }
+
             @endphp
 
             @if($semtt)
@@ -139,6 +140,9 @@
             @foreach ($posts as $post)
             @php
             $deulike = false;
+
+            
+            $data = date("d/m/Y H:i:s", strtotime($post->created_at));
             @endphp
 
             <div class="post">
@@ -150,7 +154,7 @@
 
               <div class="details-post">
                 <div class="autor-post">
-                  <a href="#" class="name">Daniel de Sá</a> <br> <a href="#" class="date">{{ $post->created_at }}</a>
+                  <a href="#" class="name">Daniel de Sá</a> <br> <a href="#" class="date">{{ $data }}</a>
                 </div>
 
                 <div class="title-post">
@@ -159,18 +163,18 @@
                       {{ $post->title }}
                     </a>
                   </h2>
-                  <div class="hashtag">
+                  <!--<div class="hashtag">
                     <a href="#">{{ $post->tag }}</a>
-                  </div>
+                  </div> -->
 
                   <div class="reactions">
                     <div class="react">
                       <a class="like" onclick="handleLike({{ auth()->user()->id }}, {{ $post->id }} )">
                         @php
                         foreach($likes as $like) {
-                        if($like->id_post == $post->id) {
-                        $deulike = true;
-                        }
+                          if($like->id_post == $post->id) {
+                            $deulike = true;
+                          }
                         }
 
                         @endphp
