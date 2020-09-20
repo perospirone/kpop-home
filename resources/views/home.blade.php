@@ -23,7 +23,11 @@
       <div class="column1 box">
 
         <a class="sidebar-profile">
-          <img src="{{ asset('storage/' . $user->path_profile_image ) }}" width="48" height="48">
+          @if($user->path_profile_image === null)
+
+          @else
+            <img src="{{ asset('storage/' . $user->path_profile_image ) }}" width="48" height="48">
+          @endif
 
           @php
             $username = "@" . auth()->user()->username;
