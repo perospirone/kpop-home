@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{ asset('css/dropdown.css') }}">
+
 <header class="">
   <div class="top-bar-container maxWidth">
 
@@ -20,12 +22,18 @@
       <a class="iconButton" href="#">
         <i class="far fa-bell"></i>
       </a>
-      <div class="menu-profile">
-        <a href="{{ URL::to('/profile/' . auth()->user()->username ) }}">
+      <div class="menu-profile dropdown">
+        <a class="dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <img src="{{ asset('storage/' . $user->path_profile_image ) }}"></img>
         </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="{{ URL::to('/profile/' . auth()->user()->username ) }}">Profile</a>
+          <a class="dropdown-item logout" href="#">Logout</a>
+        </div>
       </div>
 
     </div>
-  </div>
+    </div>
 </header>
+
+
