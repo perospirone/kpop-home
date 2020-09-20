@@ -128,7 +128,7 @@
 
           <div class="sidebar-data">
             <div> {{  sizeof($posts) }} Posts Published</div>
-            <div>0 Comments Written</div>
+            {{-- <div>0 Comments Written</div> --}}
             <!-- <div>35 Tags Followed</div> -->
           </div>
 
@@ -182,9 +182,9 @@
                         @endif
                       </a>
 
-                      <a class="comment">
+                      {{-- <a class="comment">
                         <i class="far fa-comment"></i> {{ $post->num_comments }} comments
-                      </a>
+                      </a> --}}
                     </div>
                     <div class="react2">
                       <!-- <small>{{$post->time_read}} min read</small> -->
