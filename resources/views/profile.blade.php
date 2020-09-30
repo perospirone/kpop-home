@@ -23,9 +23,16 @@
     <main>
       <div class="marrom"></div>
       <div class="profile">
-        <a href="{{ URL::route('settings') }}" class="btn btn-primary write-post">
-          Settings
-        </a>
+        @php
+          $id = auth()->user()->id;
+        @endphp
+
+        @if($user->id === $id)
+          <a href="{{ URL::route('settings') }}" class="btn btn-primary write-post">
+            Settings
+          </a>
+        @else
+        @endif
         <div class="descr">
           <img src="{{ asset('storage/' . $user->path_profile_image ) }}" width="150" height="150">
 
@@ -141,7 +148,7 @@
             @php
             $deulike = false;
 
-            
+
             $data = date("d/m/Y H:i:s", strtotime($post->created_at));
             @endphp
 

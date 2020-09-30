@@ -15,7 +15,7 @@ class ProfileController extends Controller {
   public function show($username) {
     $id = auth()->user()->id;
 
-    $usr = User::where(['id' => $id])->get();
+    $usr = User::where(['username' => $username])->get();
     $user = $usr[0];
 
     $posts_user = Post::where(['creator_id' => $id ])->orderBy('id', 'desc')->get();
