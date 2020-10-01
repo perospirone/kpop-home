@@ -30,7 +30,7 @@
       }*/
 
       var editor = new Simditor({
-        textarea: element
+        textarea: 
         //optional options
       });
 
