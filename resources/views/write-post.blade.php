@@ -21,21 +21,6 @@
     <script type="text/javascript" src="{{ asset('js/simditor/lib/simditor.js') }}"></script>
   </head>
   <body>
-    <script type="text/javascript">
-      var element = document.getElementsByClassName('editor')
-
-      console.log(element)
-      /*for (var i = 0; i == element.length; i++) {
-        console.log(element[i]);
-      }*/
-
-      var editor = new Simditor({
-        textarea: 
-        //optional options
-      });
-
-    </script>
-
     <header class="">
       <div class="top-bar-container maxWidth divF">
 
@@ -76,7 +61,7 @@
             </div> -->
           </div>
 
-          <div class="text-padding">
+          <div id="editor" class="text-padding">
             <!-- <div class="upload-image">
               <button type="button" class="btn">
                 <i class="fas fa-image"></i>
@@ -84,7 +69,8 @@
                 <input type="file" name="image">
               </button>
             </div> -->
-            <textarea id="editor" class="write-content editor" name="content" placeholder="Write your post content here..." required="required"></textarea>
+            <!-- <textarea class="write-content editor" name="content" placeholder="Write your post content here..." required="required"></textarea> -->
+            <editor name="content"></editor>
           </div>
         </div>
 
@@ -101,5 +87,6 @@
       </form>
     </main>
 
+    <script src="{{ asset('js/write-post.js') }}"></script>
   </body>
 </html>
