@@ -23,6 +23,7 @@ class CreatePost extends Migration
         $table->integer('num_likes');
         $table->integer('num_comments');
         $table->string('name_author');
+        $table->string('username_author');
         // $table->integer('time_read');
 
         $table->unsignedBigInteger('creator_id');

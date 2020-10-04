@@ -33,7 +33,7 @@
             $username = "@" . auth()->user()->username;
           @endphp
 
-          <div> 
+          <div>
             <h4>{{ auth()->user()->name }}</h4>
             <small>{{ $username }}</small>
           </div>
@@ -76,9 +76,9 @@
           </navbar>
         </div>
 
-             <div class="anuncio"> 
-              <h1>ANUNCIE AQUI DANIEL</h1>
-            </div> -->
+         <div class="anuncio">
+          <h1>ANUNCIE AQUI DANIEL</h1>
+        </div> -->
 
           </div>
           <div class="column2 box">
@@ -99,7 +99,7 @@
               @foreach ($posts as $post)
               @php
               $deulike = false;
-              
+
               $data = date("d/m/Y H:i:s", strtotime($post->created_at));
               @endphp
 
@@ -109,15 +109,15 @@
                 @else
                   <img src="{{ asset('storage/' . $post->path_cover_image) }}">
                 @endif
-                
+
                 <div class="details-post">
                   <div class="autor-post">
-                    <a href="#" class="name">Daniel de Sá</a> <br> <a href="#" class="date">{{ $data }}</a>
+                    <a href="{{ URL::route('profile', $post->username_author) }}" class="name">{{ $post->name_author }}</a> <br> <a href="#" class="date">{{ $data }}</a>
                   </div>
 
                   <div class="title-post">
                     <h2>
-                      <a href="#">
+                      <a href="{{ URL::route('post', $post->id)}}">
                         {{ $post->title }}
                       </a>
                     </h2>
@@ -132,16 +132,16 @@
                             foreach($likes as $like) {
                               if($like->id_post == $post->id) {
                                 $deulike = true;
-                              } 
+                              }
                             }
                           @endphp
-                          
+
                           @if($deulike === true)
                             <i id="heart{{ $post->id }}" class="fas fa-heart"></i> <span id="like{{ $post->id }}">{{ $post->num_likes }}</span> likes
                           @else
                             <i id="heart{{ $post->id }}" class="far fa-heart"></i> <span id="like{{ $post->id }}">{{ $post->num_likes }}</span> likes
                           @endif
-                        </a>  
+                        </a>
 
                         <!-- <a class="comment">
                           <i class="far fa-comment"></i> {{ $post->num_comments }} comments
@@ -150,14 +150,14 @@
                       </div>
                       <div class="react2">
                         <!-- <small> {{ $post->time_read }} min read</small> -->
-                        <button type="button" class="btn btn-light">Save</button>
+                        <!-- <button type="button" class="btn btn-light">Save</button> -->
                       </div>
 
                     </div>
                   </div>
                 </div>
 
-              </div>  
+              </div>
               @endforeach
 
 
@@ -190,7 +190,7 @@
                 <h3>Noticias</h3>
               <div>
                 <a href="#">Mostrar todos</a>
-              </div> 
+              </div>
             </header>
 
             <div>
@@ -205,7 +205,7 @@
               <a href="#">aklsdjklsadjklasldsa</a>
             </div>
 
-            
+
             </section> -->
 
 

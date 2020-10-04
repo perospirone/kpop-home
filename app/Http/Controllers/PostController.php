@@ -42,7 +42,9 @@ use App\User;
 
       $name_author = auth()->user()->name;
 
-      $post = $this->objPost->create(['title' => $title, 'tags' => $tags, 'content' => $content, 'path_cover_image' => $path_cover_image, 'path_image' => $path_image, 'creator_id' => $id, 'num_likes' => 0, 'num_comments' => 0, 'name_author' => $name_author]);
+      $username_author = auth()->user()->username;
+
+      $post = $this->objPost->create(['title' => $title, 'tags' => $tags, 'content' => $content, 'path_cover_image' => $path_cover_image, 'path_image' => $path_image, 'creator_id' => $id, 'num_likes' => 0, 'num_comments' => 0, 'name_author' => $name_author, 'username_author' => $username_author]);
 
       return redirect("/post/$post->id");
     }
@@ -65,13 +67,13 @@ use App\User;
     public function show($id) {
       $pst = Post::where(['id' => $id])->get();
       $post = $pst[0];
-      
-      $id_user = $post->creator_id; 
-      
+
+      $id_user = $post->creator_id;
+
       $usr = User::where(['id' => $id_user])->get();
       $user = $usr[0];
 
-      $user->joined = date("d/m/Y H:i:s", strtotime($user->created_at)); 
+      $user->joined = date("d/m/Y H:i:s", strtotime($user->created_at));
       $post->data = date("d/m/Y H:i:s", strtotime($post->created_at));
 
       $like = Like::where(['id_user' => $id_user, 'id_post' => $id])->first();
