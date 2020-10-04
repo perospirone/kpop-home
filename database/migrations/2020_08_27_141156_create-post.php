@@ -19,12 +19,11 @@ class CreatePost extends Migration
         $table->string('tags')->nullable();
         $table->string('path_cover_image')->nullable();
         $table->string('path_image')->nullable();
-        $table->string('content');
+        $table->string('content', 6000);
         $table->integer('num_likes');
         $table->integer('num_comments');
         $table->string('name_author');
         // $table->integer('time_read');
-
 
         $table->unsignedBigInteger('creator_id');
 
