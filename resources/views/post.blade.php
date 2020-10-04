@@ -53,9 +53,11 @@
               </div>
 
               <div class="content">
-                {{ $post->content }}
+                @php
+                  echo $post->content;
+                @endphp
               </div>
-            
+
              <!-- <div class="comments">
                 <div class="user-comment">
                   <form action="#" method="post">
@@ -123,7 +125,7 @@
                 <div class="biography">
                   {{ $user->bio }}
                 </div>
-               
+
                 <!-- <div class="follow">
                   <button class="btn btn-primary write-post">
                     Follow
@@ -132,7 +134,7 @@
 
                 <div class="user-details">
                   <ul>
-                    
+
                     @if($user->status === null)
                     @else
                       <li>
@@ -153,7 +155,7 @@
 
                   </ul>
                 </div>
-              
+
               </div>
             </div>
 
