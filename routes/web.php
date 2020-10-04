@@ -27,4 +27,11 @@ Route::post('/posts/create', 'PostController@create')->name('create.post');
 
 Route::post('/posts/{id}', 'PostController@addLikes');
 
-Route::get('/profile/{username}', 'ProfileController@show');
+Route::get('/profile/{username}', 'ProfileController@show')->name('profile');
+
+Route::get('/post/{id}', 'PostController@show');
+
+Route::get('/settings', 'SettingsController@index')->name('settings');
+Route::put('/settings', 'SettingsController@update')->name('settings.update');
+
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');

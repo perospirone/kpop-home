@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Casa das Kpopers</title>
+  <title>Kpop Home</title>
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/home.css') }}">
   <script src="https://kit.fontawesome.com/60e76d6bf1.js" crossorigin="anonymous"></script>
@@ -17,43 +17,17 @@
 </head>
 <body>
   <div class="mainContainer">
-    <header class="">
-      <div class="top-bar-container maxWidth">
-
-        <div class="flexDiv">
-          <div class="logo">
-            Casa das Kpopers
-          </div>
-
-          <div class="search-box">
-            <form class="" action="#" method="get">
-              <input type="text" name="" value="" placeholder="Pesquisar">
-            </form>
-          </div>
-        </div>
-
-        <div class="top-right">
-          <a href="{{ URL::route('new') }}" class="btn btn-primary write-post">
-            Write a post
-          </a>
-          <a class="iconButton" href="#">
-            <i class="far fa-bell"></i>
-          </a>
-          <div class="menu-profile">
-            <a href="{{ URL::to('/profile/' . auth()->user()->username ) }}">
-              <img src="{{ asset('assets/d.png') }}"></img>
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </header>
+    @include('components.header')
 
     <main class="mainFlex maxWidth">
       <div class="column1 box">
 
         <a class="sidebar-profile">
-          <img src="{{ asset('assets/d.png') }}" width="48" height="48">
+          @if($user->path_profile_image === null)
+
+          @else
+            <img src="{{ asset('storage/' . $user->path_profile_image ) }}" width="48" height="48">
+          @endif
 
           @php
             $username = "@" . auth()->user()->username;
@@ -66,7 +40,7 @@
         </a>
 
 
-        <div class="vertical-menu">
+        <!--- <div class="vertical-menu">
           <a href="#" class="active">Home</a>
           <a href="#">Link 1</a>
           <a href="#">Link 2</a>
@@ -102,7 +76,7 @@
           </navbar>
         </div>
 
-            <!-- <div class="anuncio"> 
+             <div class="anuncio"> 
               <h1>ANUNCIE AQUI DANIEL</h1>
             </div> -->
 
@@ -111,20 +85,22 @@
             <header>
               <h2>Posts</h2>
 
-              <nav>
+              <!-- <nav>
                 <a href="#" class="feed">Feed</a>
                 <a href="#">Week</a>
                 <a href="#">Month</a>
                 <a href="#">Year</a>
                 <a href="#">Infinity</a>
                 <a href="#">Latest</a>
-              </nav>
+                </nav> -->
             </header>
             <div class="posts">
 
               @foreach ($posts as $post)
               @php
-                $deulike = false;
+              $deulike = false;
+              
+              $data = date("d/m/Y H:i:s", strtotime($post->created_at));
               @endphp
 
               <div class="post">
@@ -136,7 +112,7 @@
                 
                 <div class="details-post">
                   <div class="autor-post">
-                    <a href="#" class="name">Daniel de Sá</a> <br> <a href="#" class="date">{{ $post->created_at }}</a>
+                    <a href="#" class="name">Daniel de Sá</a> <br> <a href="#" class="date">{{ $data }}</a>
                   </div>
 
                   <div class="title-post">
@@ -145,35 +121,35 @@
                         {{ $post->title }}
                       </a>
                     </h2>
-                    <div class="hashtag">
+                    <!-- <div class="hashtag">
                       <a href="#">{{ $post->tag }}</a>
-                    </div>
+                    </div> -->
 
                     <div class="reactions">
                       <div class="react">
-                        <a class="like" onclick="handleLike({{ auth()->user()->id }}, {{ $post->id }} )">
+                        <a class="like" onclick="handleLike({{ auth()->user()->id }}, {{ $post->id }})">
                           @php
                             foreach($likes as $like) {
                               if($like->id_post == $post->id) {
                                 $deulike = true;
                               } 
                             }
-
                           @endphp
                           
-                          @if($deulike == true)
+                          @if($deulike === true)
                             <i id="heart{{ $post->id }}" class="fas fa-heart"></i> <span id="like{{ $post->id }}">{{ $post->num_likes }}</span> likes
                           @else
                             <i id="heart{{ $post->id }}" class="far fa-heart"></i> <span id="like{{ $post->id }}">{{ $post->num_likes }}</span> likes
                           @endif
                         </a>  
 
-                        <a class="comment">
+                        <!-- <a class="comment">
                           <i class="far fa-comment"></i> {{ $post->num_comments }} comments
-                        </a>
+                        </a> -->
+
                       </div>
                       <div class="react2">
-                        <!-- <small>{{$post->time_read}} min read</small> -->
+                        <!-- <small> {{ $post->time_read }} min read</small> -->
                         <button type="button" class="btn btn-light">Save</button>
                       </div>
 
@@ -191,7 +167,7 @@
 
           </div>
           <div class="column3 box">
-            <section class="listings">
+            <!-- <section class="listings">
               <header>
                 <h3>Listagens</h3>
                 <div>
@@ -212,9 +188,9 @@
             <section class="news">
               <header>
                 <h3>Noticias</h3>
-             <!-- <div>
+              <div>
                 <a href="#">Mostrar todos</a>
-              </div> -->
+              </div> 
             </header>
 
             <div>
@@ -230,7 +206,7 @@
             </div>
 
             
-          </section>
+            </section> -->
 
 
         </div>

@@ -15,11 +15,10 @@ main {
 
 .profile {
   display: flex;
+  position: relative;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   width: 95%;
-  height: 500px;
   margin: 0 auto;
   margin-top: -50px;
   background: white;
@@ -32,6 +31,15 @@ main {
   padding: 64px 16px 16px 16px;
 }
 
+main .profile .write-post {
+  align-self: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+
 .descr {
   width: 100%;
   display: flex;
@@ -40,6 +48,12 @@ main {
   align-items: center;
   padding: 24px;
   padding-top: 0 !important;
+}
+
+.descr img {
+  border-radius: 100%;
+  margin-top: -100px;
+  margin-bottom: 20px;
 }
 
 .descr h1 {
@@ -81,3 +95,104 @@ main {
   font-size: 20px;
   margin-right: 8px;
 }
+
+.descr div .icon-twitter {
+  font-size: 14px;
+}
+
+.descr div .icon-twitter i {
+  font-size: 20px;
+}
+
+.status {
+  width: 100%;
+  height: 93px; /* 93px ou 83px ou slá */
+  margin: 0 auto;
+  border-top: 1px solid #eef0f1;
+  padding: 12px;
+  text-align: center;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  justify-content: center;*/
+}
+
+.status div {
+  padding: 12px;
+  text-align: center;
+}
+
+.status div strong {
+  font-size: 85%;
+  font-weight: 500;
+  color: #64707d;
+}
+
+.status div p {
+  margin: 0;
+  color: rgb(8, 9, 10);
+  font-size: 16px;
+}
+
+
+.sidebar {
+  width: 95%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin: 0 auto;
+  margin-top: 35px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  /* line-height: 1.35em; */
+}
+
+.widget {
+  padding: 0 16px 16px 16px;
+  margin: 8px 0 16px 0;
+  font-size: 0.85em;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.widget header {
+  background: transparent;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding: 8px 0;
+  color: #08090a;
+  border: 0;
+}
+
+.widget header h4 {
+  margin: 0;
+  font-size: 13.77px;
+  font-weight: 700;
+}
+
+.widget-body {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.widget-body p {
+  margin: 8px 0;
+  font-weight: 400;
+  font-size: 15.3px;
+}
+
+.sidebar-data {
+  border-radius: 3px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  padding: 16px;
+  color: rgb(100, 112, 125);
+  font-size: 15.3px;
+  margin-bottom: 32px;
+}
+
+.posts-user {
+  margin-left: 25px; /* pode trocar se necessario */
+}
+
+

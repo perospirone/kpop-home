@@ -98,7 +98,7 @@ header {
   padding: 32px 64px;
 }
 
- .cover-imagebtn {
+.cover-imagebtn {
   background: white;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 3px 0px;
   border: 2px solid;
@@ -149,8 +149,9 @@ header {
 }
 
 .write-content {
-  resize: none;
+  /* resize: none; */
   width: 100%;
+  height: 257px;
   border: 0;
   font-size: 18px;
   font-weight: 400;

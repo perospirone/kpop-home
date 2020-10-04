@@ -16,12 +16,13 @@ class CreatePost extends Migration
       Schema::create('publications', function (Blueprint $table) {
         $table->id();
         $table->string('title');
-        $table->string('tag');
+        $table->string('tags')->nullable();
         $table->string('path_cover_image')->nullable();
         $table->string('path_image')->nullable();
         $table->string('content');
         $table->integer('num_likes');
         $table->integer('num_comments');
+        $table->string('name_author');
         // $table->integer('time_read');
 
 
