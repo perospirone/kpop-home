@@ -161,12 +161,12 @@
 
               <div class="details-post">
                 <div class="autor-post">
-                  <a href="#" class="name">Daniel de Sá</a> <br> <a href="#" class="date">{{ $data }}</a>
+                  <a href="#" class="name">{{ $user->name }}</a> <br> <a href="#" class="date">{{ $data }}</a>
                 </div>
 
                 <div class="title-post">
                   <h2>
-                    <a href="#">
+                    <a href="{{ URL::route('post', $post->id)}}">
                       {{ $post->title }}
                     </a>
                   </h2>

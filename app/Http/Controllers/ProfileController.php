@@ -18,10 +18,10 @@ class ProfileController extends Controller {
     $usr = User::where(['username' => $username])->get();
     $user = $usr[0];
 
-    $posts_user = Post::where(['creator_id' => $id ])->orderBy('id', 'desc')->get();
+    $posts_user = Post::where(['creator_id' => $user->id ])->orderBy('id', 'desc')->get();
 
     $allLikes = Like::where(['id_user' => $id])->get();
 
-		return view('profile', ['posts' => $posts_user, 'likes' => $allLikes, 'user' => $user]);
-	}
+    return view('profile', ['posts' => $posts_user, 'likes' => $allLikes, 'user' => $user]);
+  }
 }
