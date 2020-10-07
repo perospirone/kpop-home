@@ -1,5 +1,7 @@
 let httpRequest;
 
+let url = 'http://kpophome.herokuapp.com'
+
 if (window.XMLHttpRequest) { // Mozilla, Safari, ...
 	httpRequest = new XMLHttpRequest();
 } else if (window.ActiveXObject) { // IE 8 and older
@@ -8,7 +10,7 @@ if (window.XMLHttpRequest) { // Mozilla, Safari, ...
 
 function handleLike(idUser, idPost) {
 	httpRequest.onreadystatechange = (req) => {
-		
+
 		if(httpRequest.status == 200) {
 
 			let likes = document.getElementById(`like${idPost}`);
@@ -19,7 +21,7 @@ function handleLike(idUser, idPost) {
 		}
 	}
 
-	httpRequest.open('POST', `http://127.0.0.1:8000/posts/${idPost}`, false);
+	httpRequest.open('POST', `${url}/posts/${idPost}`, false);
 	httpRequest.setRequestHeader("X-CSRF-TOKEN", $('meta[name="csrf-token"]').attr('content'));
 	httpRequest.send({ idUser: idUser });
 }
