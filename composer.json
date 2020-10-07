@@ -57,7 +57,7 @@
       "@php artisan package:discover --ansi",
       "php artisan storage:link",
       "chmod -R 777 public/",
-      "chmod -R 777 storage/app/public",
+      "chmod -R 777 storage/app/public"
     ],
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
