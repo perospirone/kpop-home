@@ -21,10 +21,10 @@ use App\User;
       $tags = null;
       $content = $req->content;
 
-      $path_cover_image;
-      $path_image;
+      $path_cover_image = null;
+      $path_image = null;
 
-      if($req->file('cover-image') === null) {
+      /*if($req->file('cover-image') === null) {
         $path_cover_image = null;
       } elseif($req->file('cover-image')->isValid()) {
         $path_cover_image = $req->file('cover-image')->store('public/images');
@@ -36,7 +36,7 @@ use App\User;
       } elseif($req->file('image')->isValid()) {
         $path_image = $req->file('image')->store('public/images');
         $path_image = str_replace('public/', '', $path_image);
-      }
+      }*/
 
       $id = auth()->user()->id;
 

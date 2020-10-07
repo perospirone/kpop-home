@@ -81,6 +81,7 @@
         </div> -->
 
           </div>
+
           <div class="column2 box">
             <header>
               <h2>Posts</h2>
