@@ -34,7 +34,10 @@
         @else
         @endif
         <div class="descr">
-          <img src="{{ asset('storage/' . $user->path_profile_image ) }}" width="150" height="150">
+          @if($user->path_profile_image === null)
+          @else
+            <img src="{{ asset('storage/' . $user->path_profile_image ) }}" width="150" height="150">
+          @endif
 
           <h1>{{ $user->name }}</h1>
           <p>{{ $user->bio }}</p>
