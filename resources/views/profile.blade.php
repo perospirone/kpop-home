@@ -34,7 +34,10 @@
         @else
         @endif
         <div class="descr">
-          <img src="{{ asset('storage/' . $user->path_profile_image ) }}" width="150" height="150">
+          @if($user->path_profile_image === null)
+          @else
+            <img src="{{ asset('storage/' . $user->path_profile_image ) }}" width="150" height="150">
+          @endif
 
           <h1>{{ $user->name }}</h1>
           <p>{{ $user->bio }}</p>
@@ -161,7 +164,7 @@
 
               <div class="details-post">
                 <div class="autor-post">
-                  <a href="#" class="name">{{ $user->name }}</a> <br> <a href="#" class="date">{{ $data }}</a>
+                  <a class="name">{{ $user->name }}</a> <br> <a href="#" class="date">{{ $data }}</a>
                 </div>
 
                 <div class="title-post">
