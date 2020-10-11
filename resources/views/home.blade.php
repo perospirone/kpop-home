@@ -26,7 +26,7 @@
           @if($user->path_profile_image === null)
 
           @else
-            <img src="{{ asset('storage/' . $user->path_profile_image ) }}" width="48" height="48">
+            <img src="{{ asset($user->path_profile_image ) }}" width="48" height="48">
           @endif
 
           @php
@@ -108,7 +108,7 @@
                 @if($post->path_cover_image === null)
 
                 @else
-                  <img src="{{ asset('storage/' . $post->path_cover_image) }}">
+                  <img src="{{ asset($post->path_cover_image) }}">
                 @endif
 
                 <div class="details-post">

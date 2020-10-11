@@ -37,7 +37,7 @@
             <div class="column2 box">
               @if($post->path_cover_image === null)
               @else
-                <img src="{{ asset('storage/' . $post->path_cover_image) }}">
+                <img src="{{ asset($post->path_cover_image) }}">
               @endif
 
               <div class="description">
@@ -117,7 +117,7 @@
                 <div class="black"></div>
                 <a href="{{ URL::route('profile', ['username' => $user->username])}}">
                   <span class="img-profile">
-                    <img src="{{ asset('storage/'. $user->path_profile_image) }}">
+                    <img src="{{ asset($user->path_profile_image) }}">
                   </span>
                   <span class="name-creator">{{ $user->name }}</span>
                 </a>

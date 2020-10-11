@@ -36,7 +36,7 @@
         <div class="descr">
           @if($user->path_profile_image === null)
           @else
-            <img src="{{ asset('storage/' . $user->path_profile_image ) }}" width="150" height="150">
+            <img src="{{ asset( $user->path_profile_image ) }}" width="150" height="150">
           @endif
 
           <h1>{{ $user->name }}</h1>
@@ -159,7 +159,7 @@
               @if($post->path_cover_image === null)
 
               @else
-                <img src="{{ asset('storage/' . $post->path_cover_image) }}">
+                <img src="{{ asset($post->path_cover_image) }}">
               @endif
 
               <div class="details-post">
