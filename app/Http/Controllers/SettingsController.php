@@ -43,9 +43,13 @@ class SettingsController extends Controller {
     if($req->file('photo') === null) {
     
     } elseif($req->file('photo')->isValid()) {
-      $path_profile_image = $req->file('photo')->store("public/images/profile/$id");
-      $path_profile_image = str_replace('public/', '', $path_profile_image);
-      $usr->path_profile_image = $path_profile_image;
+      // Integração com cloudinary
+      $usr->path_profile_image = $req->file('photo')->storeOnCloudinary()->getSecurePath();
+
+      // Padrão laravel pra salvar imagens
+      // $path_profile_image = $req->file('photo')->store("public/images/profile/$id");
+      // $path_profile_image = str_replace('public/', '', $path_profile_image);
+      // $usr->path_profile_image = $path_profile_image;
     }
 
 
