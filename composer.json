@@ -56,9 +56,7 @@
     "post-autoload-dump": [
       "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
       "@php artisan package:discover --ansi",
-      "php artisan storage:link",
-      "chmod -R 777 public/",
-      "chmod -R 777 storage/app/public"
+      "php artisan storage:link"
     ],
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
