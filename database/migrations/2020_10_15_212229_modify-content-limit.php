@@ -14,7 +14,7 @@ class ModifyContentLimit extends Migration
     public function up()
     {
       Schema::table('publications', function (Blueprint $table) {
-        $table->string('content', 15000)->change();
+        $table->string('content', 60000)->change();
       });
     }
 
