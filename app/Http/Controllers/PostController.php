@@ -19,7 +19,9 @@ class PostController extends Controller {
   public function create(Request $req) {
     $title = $req->title;
     $tags = null;
-    $content = $req->content;
+    $content = '';
+
+    $content = str_replace(['<script>', '</script>'], ' ', $req->content);
 
     $path_cover_image;
     $path_image;
