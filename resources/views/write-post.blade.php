@@ -52,7 +52,7 @@
             </div> -->
           </div>
 
-          <div id="editor" class="text-padding">
+          <div id="app" class="text-padding">
             <!-- <div class="upload-image">
               <button type="button" class="btn">
                 <i class="fas fa-image"></i>
@@ -77,6 +77,6 @@
 
       </form>
     </main>
-    <script src="{{ asset('js/write-post.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
   </body>
 </html>
