@@ -35,3 +35,9 @@ Route::get('/settings', 'SettingsController@index')->name('settings');
 Route::put('/settings', 'SettingsController@update')->name('settings.update');
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+
+// rotas teste
+
+Route::get('/teste', function () {
+  return view('teste');
+});

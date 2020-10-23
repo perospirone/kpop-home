@@ -2,16 +2,9 @@
   <div id="app">
     <vue-editor v-model="content"></vue-editor>
 
-
-  <textarea name="content" id="conteudo" cols="30" rows="10" v-model="content"></textarea>
+    <textarea name="content" id="conteudo" cols="30" rows="10" v-model="content"></textarea>
   </div>
 </template>
-
-<style>
-textarea {
-  visibility: hidden;
-}
-</style>
 
 <script>
 import { VueEditor } from "vue2-editor";
@@ -23,8 +16,15 @@ export default {
 
   data() {
     return {
-      content: "<h1>Some initial content</h1>"
+      content: "<h1>Faça seu post incrivel</h1>"
     };
   }
 };
 </script>
+
+<style>
+textarea {
+  visibility: hidden;
+}
+</style>
+

@@ -1,8 +1,50 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Nunito, Roboto');
 
 // Variables
 @import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// @import '~bootstrap/scss/bootstrap';
+
+
+* {
+  font-family: 'Roboto', 'Nunito', sans-serif;
+}
+
+html {
+  background-color: #eef0f1;
+  height: 100vh;
+}
+
+.mainContainer {
+  margin: 0;
+  padding: 0;
+  background-color: #eef0f1;
+  font-family: 'Roboto', 'Nunito', sans-serif;
+  height: 100vh;
+  width: 100%;
+}
+
+.maxWidth {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.topBarContainer {
+  display: flex;
+  height: 56px;
+  justify-content: space-between;
+}
+
+.flexDiv {
+  display: flex;
+  align-items: center;
+}
+
+.topRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-basis: 200px;
+}
