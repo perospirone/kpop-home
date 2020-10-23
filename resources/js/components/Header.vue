@@ -14,7 +14,9 @@
         </div>
       </div>
 
-      <div class="topRight"></div>
+      <div class="topRight">
+
+      </div>
     </div>
   </header>
 
@@ -60,6 +62,13 @@ export default {
     color: #3b3b3b;
     border-radius: 5px;
 
+  }
+
+  .topRight {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-basis: 200px;
   }
 
 
