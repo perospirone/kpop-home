@@ -3,7 +3,6 @@
     <div class="topBarContainer maxWidth">
       <div class="flexDiv">
         <a class="logo" href="#">
-
           <img src="https://res.cloudinary.com/difh39tam/image/upload/v1603493966/lehn5xc5gpcwko8rjndt.png">
         </a>
 
@@ -15,16 +14,19 @@
       </div>
 
       <div class="topRight">
-
+        <a href="#" class="writePost">
+          <b-button variant="primary">Write a post</b-button> 
+        </a>
+          <b-icon icon="bell" style="width: 23px; height: 23px;"></b-icon>
       </div>
     </div>
   </header>
-
 </template>
 
 <script>
 export default {
-
+  components: {
+  }
 }
 </script>
 
@@ -67,9 +69,15 @@ export default {
   .topRight {
     display: flex;
     align-items: center;
-    justify-content: space-around;
     flex-basis: 200px;
   }
+
+  .topRight .writePost {
+    margin-right: 10px; 
+  }
+
+
+
 
 
 </style>
