@@ -17,7 +17,13 @@
         <a href="#" class="writePost">
           <b-button variant="primary">Write a post</b-button> 
         </a>
-          <b-icon icon="bell" style="width: 23px; height: 23px;"></b-icon>
+        <b-icon icon="bell" style="width: 23px; height: 23px;"></b-icon>
+        <div class="menu-profile">
+          <a>
+            <img src="dasdsa">
+          </a>
+
+        </div>
       </div>
     </div>
   </header>
@@ -76,7 +82,13 @@ export default {
     margin-right: 10px; 
   }
 
+  .menu {
+    height: 100%;
+  }
 
+  .menu a {
+    margin: 0 auto;
+  }
 
 
 
