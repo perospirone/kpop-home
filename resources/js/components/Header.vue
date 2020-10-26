@@ -19,10 +19,14 @@
         </a>
         <b-icon icon="bell" style="width: 23px; height: 23px;"></b-icon>
         <div class="menu-profile">
-          <a>
+          <a class="linkProfile" @click="toogle">
             <img src="dasdsa">
           </a>
 
+          <div class="menu-drop" v-if="active">
+            <a class="item-drop" href="#">Profile</a>
+            <a class="item-drop logout" href="#">Logout</a>
+          </div>
         </div>
       </div>
     </div>
@@ -31,6 +35,16 @@
 
 <script>
 export default {
+  data () {
+    return {
+      active: true
+    }
+  },
+  methods: {
+    toogle () {
+      this.active = !this.active
+    }
+  },
   components: {
   }
 }
@@ -74,20 +88,75 @@ export default {
 
   .topRight {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     flex-basis: 200px;
   }
 
   .topRight .writePost {
-    margin-right: 10px; 
+    /* margin-right: 10px;*/
   }
 
-  .menu {
+  .menu-profile {
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+
+  .menu-profile .linkProfile {
+    width:  32px;
+    height: 32px;
+    cursor: pointer;
+    color: rgb(8, 9, 10);
+  }
+
+  .menu-profile .linkProfile:hover {
+  }
+
+  .menu-profile a img {
+    width: 100%;
     height: 100%;
+    border-radius: 100%
   }
 
-  .menu a {
-    margin: 0 auto;
+  .menu-drop {
+    position: absolute;
+    width: 158px;
+    height: 95px;
+    background: white;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    z-index: 1000;
+    
+
+    will-change: transform;
+    top: 5px;
+    /* left: 50px; */
+    /*right: auto;
+    bottom: auto;*/
+    transform: translate3d(-65px, 44px, 0px);
+  }
+
+  .item-drop {
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    font-weight: 400;
+    color: #212529;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .item-drop:hover {
+    text-decoration: none;
+    background: #F8F9FA;
+  }
+
+  .logout {
+    margin-top: 10px;
+    border-top: 1px solid #D2D6DB;
   }
 
 
