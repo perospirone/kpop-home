@@ -25,7 +25,9 @@
 
           <div class="menu-drop" v-if="active">
             <a class="item-drop" href="#">Profile</a>
-            <a class="item-drop logout" href="#">Logout</a>
+            <div class="logout-div">
+              <a class="item-drop logout-item" href="#">Logout</a>
+            </div>
           </div>
         </div>
       </div>
@@ -121,8 +123,9 @@ export default {
 
   .menu-drop {
     position: absolute;
+    display: relative;
     width: 158px;
-    height: 95px;
+    height: 105px;
     background: white;
     border: 1px solid rgba(0,0,0,.15);
     border-radius: .25rem;
@@ -154,9 +157,13 @@ export default {
     background: #F8F9FA;
   }
 
-  .logout {
+  .logout-div {
     margin-top: 10px;
     border-top: 1px solid #D2D6DB;
+  }
+
+  .logout-item {
+    margin-top: 10px;
   }
 
 
