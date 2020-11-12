@@ -1,5 +1,5 @@
 <template>
-  <div class="app">
+  <div class="posts">
     <Post></Post>
   </div>
 </template>
@@ -13,11 +13,10 @@ export default {
   }
 };
 
-
 </script>
 
 <style scoped>
-.app {
+.posts {
   width: 100%;
   height: 100%;
   display: flex;

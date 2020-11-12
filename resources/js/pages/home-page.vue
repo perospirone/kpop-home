@@ -24,7 +24,7 @@
             <a href="#">Latest</a>
           </nav>
         </header>
-        <!-- <Posts></Posts> -->
+        <Posts></Posts>
       </div>
 
     	<div class="column3 box"></div>

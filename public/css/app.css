@@ -32,3 +32,15 @@ html {
   align-items: center;
 }
 
+.mainFlex {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.box {
+  border-radius: 5px;
+  padding: 5px;
+}
+
