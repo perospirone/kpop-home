@@ -25,6 +25,8 @@ export default {
 <style>
 textarea {
   visibility: hidden;
+  width: 0;
+  height: 0;
 }
 </style>
 
