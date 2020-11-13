@@ -1,7 +1,19 @@
 <template>
   <div class="write-post mainContainer">
     <header>
-      <div class="top-bar maxWidth divF">d</div>
+      <div class="maxWidth divF">
+        <div class="top-bar">
+          <div class="text-top">
+            <span>Write a new post</span>
+          </div>
+
+          <div class="edit-preview">
+            <b-button variant="light">Edit</b-button>
+            <b-button variant="light">Preview</b-button>
+          </div>
+        </div> 
+
+      </div>
       <div class="close">
         <a href="#">
           <b-icon icon="x" style="width: 30px; height: 30px;"></b-icon>
@@ -34,6 +46,31 @@ header {
   justify-content: space-between;
   height: 56px;
 }
+
+.top-bar {
+  width: 886px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.divF {
+  width: 1200px;
+}
+
+.edit-preview button {
+  background: transparent;
+  border: 0;
+}
+
+.edit-preview button:hover {
+  color: #3b49df;
+  background-color: #e2e6ea;
+  border-color: #dae0e5;
+}
+
+
+
 
 .close {
   float: right;
