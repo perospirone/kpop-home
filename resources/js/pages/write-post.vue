@@ -21,6 +21,25 @@
       </div>
     </header>
 
+    <main>
+      <form action="#" method="POST" enctype="multipart/form-data">
+        <div class="write">
+          <div class="text-padding">
+            <button type="button" class="cover-imagebtn">
+              Add a cover image
+              <input name="cover-image" accept="image/*" type="file">
+            </button>
+
+            <div class="title">
+              <input name="title" placeholder="New post title here..." required="">
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    
+
   </div>
 </template>
 
@@ -69,9 +88,6 @@ header {
   border-color: #dae0e5;
 }
 
-
-
-
 .close {
   float: right;
   text-shadow: 0 1px 0 #fff;
@@ -93,6 +109,54 @@ header {
 
 .close a:hover {
   background: rgba(0, 0, 0, 0.035);
+}
+
+main {
+  display: grid;
+  max-width: 1280px;
+  height: 500px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+  grid-template-columns: 2fr 1fr;
+  gap: 0 1rem;
+  background: #eef0f1;
+}
+
+.write {
+  background: white;
+  margin-left: 50px;
+  border-radius: 5px;
+  box-shadow: rgba(8, 9, 10, 0.1) 0px 0px 0px 1px;
+  overflow-y: scroll;
+  height: 80vh;
+}
+
+.text-padding {
+  padding: 32px 64px;
+}
+
+.cover-imagebtn {
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 3px 0px;
+  border: 2px solid;
+  border-color: rgba(8, 9, 10, 0.2);
+  padding: 6px 14px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  margin-bottom: 8px;
+}
+
+.title input {
+  height: 60px;
+  font-size: 3rem !important;
+  font-weight: 800;
+  color: #ACB3B9;
+  border: 0;
 }
 
 </style>
