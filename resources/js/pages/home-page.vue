@@ -24,6 +24,7 @@
             <a href="#">Latest</a>
           </nav>
         </header>
+
         <Posts></Posts>
       </div>
 
