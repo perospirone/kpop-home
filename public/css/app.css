@@ -44,3 +44,9 @@ html {
   padding: 5px;
 }
 
+.divF {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
