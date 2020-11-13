@@ -34,6 +34,8 @@
               <input name="title" placeholder="New post title here..." required="">
             </div>
           </div>
+
+          <Editor class="text-padding"></Editor>
         </div>
       </form>
     </main>
