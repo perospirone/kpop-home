@@ -37,6 +37,12 @@
 
           <Editor class="text-padding"></Editor>
         </div>
+
+        <footer>
+          <b-button type="submit" variant="primary" class="publish-btn">Publish</b-button>
+          <b-button variant="light" class="save-draft">Save Draft</b-button>
+          <b-button variant="light" class="revert-btn">Revert new changes</b-button>
+        </footer>
       </form>
     </main>
 
@@ -159,6 +165,27 @@ main {
   font-weight: 800;
   color: #ACB3B9;
   border: 0;
+}
+
+footer {
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.publish-btn {
+  /* padding: 8px 16px; */
+  margin-right: 8px;
+  background-color: rgb(59, 73, 223) !important;
+}
+
+.save-draft {
+  background-color: rgb(210, 214, 219) !important;
+  margin-right: 8px;
+}
+
+.revert-btn {
+  background: transparent !important;
+  border: transparent !important;
 }
 
 </style>
