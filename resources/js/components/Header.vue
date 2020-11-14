@@ -139,6 +139,7 @@ export default {
     /* left: 50px; */
     /*right: auto;
     bottom: auto;*/
+    right: -115px;
     transform: translate3d(-65px, 44px, 0px);
   }
 
