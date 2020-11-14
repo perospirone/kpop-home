@@ -126,7 +126,7 @@ main {
   padding-left: 16px;
   padding-right: 16px;
   margin: 0 auto;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   gap: 0 1rem;
   background: #eef0f1;
 }
