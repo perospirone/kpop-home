@@ -9,7 +9,26 @@
           <span>1</span>
         </a>
       </div>
-      <div class="column2 box">a</div>
+      <div class="column2 box">
+        <img src="https://res.cloudinary.com/difh39tam/image/upload/v1605470083/y1iyjari22p63tsmvaa6.jpg">
+
+        <div class="description">
+          <h1>das</h1>
+
+          <div>
+            <!-- adicionar a foto do criador do post aqui depois -->
+            <a href="#">Daniel de Sá</a>
+            <time>
+              22/10/2020 22:28:56
+            </time>
+          </div>
+        </div>
+
+        <div class="content">
+          <h1>Some initial content</h1>
+        </div>
+
+      </div>
       <div class="column3">a</div>
     </main>
 
@@ -38,8 +57,7 @@ export default {
 .column1 {
 	flex-basis: 64px; /* depois compara se fica melhor assim ou com 200px */
 	flex-grow: 0;
-	background: #eef0f1;
-
+	background: transparent;
   margin-left: -20px;
   margin-right: 10px;
   background-color: transparent;
@@ -49,7 +67,6 @@ export default {
   padding: 10px;
   padding-top: 20px;
 }
-
 
 .like {
   width: 100%;
@@ -76,26 +93,70 @@ export default {
   margin-top: 5px;
   font-size: 14px;
 }
-/*
-.column2 {
-  width: 881px;
-  padding: 0;
-}
-
-.column3 {
-  width: 325px;
-}*/
-
 
 .column2 {
 	flex-basis: 811px;
 	flex-grow: 1;
 	flex-shrink: 0;
   background: white;
+  padding: 0;
+  height: 80vh;
 }
 
+.column2 img {
+  width: 100%;
+  height: 338px;
+  border-radius: 5px 5px 0 0;
+}
+
+.description {
+  padding: 32px 64px 0 64px;
+  background: white;
+}
+
+.description h1 {
+  margin-bottom: 16px;
+  color :rgb(8, 9, 10);
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.description div {
+  color: rgb(100, 112, 125);
+  display: flex;
+  align-items: center;
+}
+
+.description a {
+  /* margin-right: 16px; */
+  font-size: 16px;
+  color: rgb(32, 36, 40);
+  align-items: center;
+  text-align: center;
+}
+/* .description span {
+  padding: 8px;
+  align-items: center;
+} */
+
+.description time {
+  color: rgb(100, 112, 125);
+  font-size: 14px;
+  padding: 8px;
+}
+
+.content {
+  width: 100%;
+  padding: 32px 64px;
+  background: white;
+}
+
+
+
+
+
 .column3 {
-	width: 325px;
+  flex-basis: 325px;
   margin-left: 10px;
   background: transparent;
 }
