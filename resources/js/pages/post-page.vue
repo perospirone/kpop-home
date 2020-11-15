@@ -10,14 +10,17 @@
         </a>
       </div>
       <div class="column2 box">
-        <img src="https://res.cloudinary.com/difh39tam/image/upload/v1605470083/y1iyjari22p63tsmvaa6.jpg">
+        <img class="cover-image" src="https://res.cloudinary.com/difh39tam/image/upload/v1605470083/y1iyjari22p63tsmvaa6.jpg">
 
         <div class="description">
           <h1>das</h1>
 
           <div>
             <!-- adicionar a foto do criador do post aqui depois -->
-            <a href="#">Daniel de Sá</a>
+            <a class="profile" href="#">
+              <img src="https://res.cloudinary.com/difh39tam/image/upload/v1605470083/y1iyjari22p63tsmvaa6.jpg">
+              Daniel de Sá
+            </a>
             <time>
               22/10/2020 22:28:56
             </time>
@@ -103,7 +106,7 @@ export default {
   height: 80vh;
 }
 
-.column2 img {
+.column2 .cover-image {
   width: 100%;
   height: 338px;
   border-radius: 5px 5px 0 0;
@@ -138,6 +141,13 @@ export default {
   padding: 8px;
   align-items: center;
 } */
+
+.profile img {
+  width:  2rem;
+  height: 2rem;
+  border-radius: 100%;
+  margin-right: 8px;
+}
 
 .description time {
   color: rgb(100, 112, 125);
