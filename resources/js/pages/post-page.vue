@@ -32,7 +32,45 @@
         </div>
 
       </div>
-      <div class="column3">a</div>
+      <div class="column3">
+        <div class="creator-profile">
+          <div class="black"></div>
+          <a href="http://kpophome.herokuapp.com/profile/danitw">
+            <span class="img-profile">
+              <img src="http://kpophome.herokuapp.com/">
+            </span>
+            <span class="name-creator">Daniel de Sá</span>
+          </a>
+
+          <div class="biography">
+
+          </div>
+
+          <!-- <div class="follow">
+            <button class="btn btn-primary write-post">
+            Follow
+            </button>
+            </div> -->
+
+            <div class="user-details">
+              <ul>
+
+
+                <li>
+                  <div class="key">Localização</div>
+                  <div class="value">São Paulo, Brasil</div>
+                </li>
+
+                <li>
+                  <div class="key">Entrou no dia</div>
+                  <div class="value last">19/10/2020 21:30:00</div>
+                </li>
+
+              </ul>
+            </div>
+
+        </div>
+      </div>
     </main>
 
   </div>
@@ -161,14 +199,107 @@ export default {
   background: white;
 }
 
-
-
-
-
 .column3 {
   flex-basis: 325px;
   margin-left: 10px;
   background: transparent;
+  height: 100vh;
+  border-radius: 5px; 
+}
+
+.creator-profile {
+  background-color: rgb(249, 250, 250);
+  border-bottom: 1px solid #c5c5c5;
+  border-radius: 5px;
+}
+
+.black {
+  background: black;
+  width: 100%;
+  height: 30px;
+  border-radius: 5px 5px 0 0;
+}
+
+.creator-profile a:hover {
+  color: rgb(50, 62, 190);
+  text-decoration: none;
+}
+
+.img-profile {
+  border-radius: 100%;
+  width: 48px;
+  height: 48px;
+  margin-left: 20px;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.img-profile img {
+  border-radius: 100%;
+  width: 48px;
+  height: 48px;
+  margin-top: -15px;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.name-creator {
+  margin-left: 5px;
+  color: rgb(32, 36, 40);
+  font-size: 18px;
+  /* font-weight: 700; */
+}
+
+.name-creator:hover {
+  color: rgb(50, 62, 190);
+}
+
+.biography {
+  padding: 16px;
+  color: rgb(77, 87, 96);
+  font-size: 16px;
+}
+
+.follow {
+  padding: 16px;
+  padding-top: 0;
+}
+
+.follow button {
+  width: 100%;
+}
+
+.user-details {
+  padding: 16px;
+  padding-top: 0;
+  color: rgb(32, 36, 40);
+  font-size: 16px;
+}
+
+.user-details ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+.user-details ul li {
+  color: rgb(32, 36, 40);
+  font-size: 16px;
+}
+
+.user-details ul li .key {
+  font-size: 12px;
+  color: rgb(100, 112, 125);
+  text-transform: uppercase;
+  /* font-weight: 700; */
+}
+
+.user-details ul li .value {
+  color: rgb(32, 36, 40);
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.last {
+  margin-bottom: 0 !important;
 }
 
 </style>
