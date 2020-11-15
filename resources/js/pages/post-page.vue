@@ -9,8 +9,8 @@
           <span>1</span>
         </a>
       </div>
-      <div class="column2 box"></div>
-      <div class="column3"></div>
+      <div class="column2 box">a</div>
+      <div class="column3">a</div>
     </main>
 
   </div>
@@ -28,10 +28,19 @@ export default {
 
 </script>
 
-<style>
+<style> /*
+.column1, .column2 {
+  height: 80vh;
+  background-color: white;
+}
+*/
+
 .column1 {
+	flex-basis: 64px; /* depois compara se fica melhor assim ou com 200px */
+	flex-grow: 0;
+	background: #eef0f1;
+
   margin-left: -20px;
-  width: 64px;
   margin-right: 10px;
   background-color: transparent;
   display: flex;
@@ -40,6 +49,7 @@ export default {
   padding: 10px;
   padding-top: 20px;
 }
+
 
 .like {
   width: 100%;
@@ -66,18 +76,28 @@ export default {
   margin-top: 5px;
   font-size: 14px;
 }
-
-
 /*
-.like b-icon {
-  align-self: center;
+.column2 {
+  width: 881px;
+  padding: 0;
 }
 
-.like svg {
-  align-self: center;
+.column3 {
+  width: 325px;
+}*/
+
+
+.column2 {
+	flex-basis: 811px;
+	flex-grow: 1;
+	flex-shrink: 0;
+  background: white;
 }
 
-.center-align {
-  align-self: center;
-} */
+.column3 {
+	width: 325px;
+  margin-left: 10px;
+  background: transparent;
+}
+
 </style>
