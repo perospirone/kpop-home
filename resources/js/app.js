@@ -13,6 +13,12 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
 
+import 'vue-awesome/icons'
+
+import Icon from 'vue-awesome/components/Icon'
+
+Vue.component('v-icon', Icon)
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

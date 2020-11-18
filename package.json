@@ -26,6 +26,7 @@
     },
     "dependencies": {
         "bootstrap-vue": "^2.18.1",
+        "vue-awesome": "^4.1.0",
         "vue2-editor": "^2.10.2"
     }
 }
