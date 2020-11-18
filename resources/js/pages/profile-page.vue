@@ -171,11 +171,17 @@ main {
   text-align: center;
   align-content: center;
   justify-content: center;*/
+  display: flex;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .status div {
   padding: 12px;
   text-align: center;
+  margin-left: -20px;
 }
 
 .status div strong {
