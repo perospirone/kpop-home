@@ -5,8 +5,9 @@
       <div class="marrom"></div>
       <div class="profile">
         <b-button variant="primary" class="settings">Settings</b-button>
+        <img src="https://res.cloudinary.com/difh39tam/image/upload/v1605733095/sils8zykftlznqklc1i0.jpg">
+
         <div class="descr">
-          <img src="https://res.cloudinary.com/difh39tam/image/upload/v1605733095/sils8zykftlznqklc1i0.jpg" width="150" height="150">
           <h1>Daniel de Sá</h1>
           <p>Já foi apunhalado por uma pluma?</p>
 
@@ -23,12 +24,6 @@
           </div>
         </div>
 
-        <div class="status">
-          <div>
-            <strong>Status</strong>
-            <p>Em você</p>
-          </div>
-        </div>
       </div>
 
     </main>
@@ -67,6 +62,8 @@ main {
   position: relative;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 95%;
   margin: 0 auto;
   margin-top: 0px;
@@ -89,34 +86,27 @@ main {
   margin-right: 15px;
 }
 
-.descr {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
-  padding: 24px;
-  padding-top: 0 !important;
-}
-
-.descr img {
+.profile img {
   width: 150px;
   height: 150px;
-
   border-radius: 100%;
   margin-top: -100px;
   margin-bottom: 20px;
+  margin-right: 0;
 }
 
-.descr h1 {
+.profile .descr {
+  width: 100%;
+}
+
+.profile .descr h1 {
   color: rgb(8, 9, 10);
-  font-size: 30px;
-  /* font-weight: 800; */
+  font-size: 2rem;
   margin-bottom: 8px;
 }
 
-.descr p {
-  font-size: 16px;
+.profile .descr p {
+  font-size: 18px;
   color: rgb(32, 36, 40);
   margin-bottom: 16px;
 }
@@ -124,76 +114,18 @@ main {
 .descr .infos {
   color: rgb(100, 112, 125);
   margin-bottom: 8px;
+  text-align: center;
+
 }
 
 .descr .infos span {
   padding: 4px 12px 4px 12px;
 }
 
-.descr .infos .info-local svg {
+.descr .infos span svg {
   width: 15px;
   height: 20px;
-  margin-right: 8px;
-}
-
-.descr .infos .info-local {
-  font-size: 14px;
-}
-
-.descr .infos .info-create {
-  font-size: 14px;
-}
-
-.descr .infos .info-create svg {
-  width: 15px;
-  height: 20px;
-  margin-right: 8px;
-}
-
-.descr .infos .icon-twitter {
-  font-size: 14px;
-}
-
-.descr .infos .icon-twitter i {
-  font-size: 20px;
-}
-
-.status {
-  width: 100%;
-  height: 93px; /* 93px ou 83px ou slá */
-  margin: 0 auto;
-  border-top: 1px solid #eef0f1;
-  padding: 12px;
-  text-align: center;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  align-content: center;
-  justify-content: center;*/
-  display: flex;
-  align-items: center;
-  text-align: center;
-  align-content: center;
-  justify-content: center;
-}
-
-.status div {
-  padding: 12px;
-  text-align: center;
-  margin-left: -20px;
-}
-
-.status div strong {
-  font-size: 85%;
-  font-weight: 500;
-  color: #64707d;
-}
-
-.status div p {
-  margin: 0;
-  color: rgb(8, 9, 10);
-  font-size: 16px;
+  margin-right: 5px;
 }
 
 </style>
