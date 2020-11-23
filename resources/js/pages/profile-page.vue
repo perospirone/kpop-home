@@ -23,6 +23,12 @@
             </span>
           </div>
         </div>
+        
+        <div class="status">
+          <strong>Status</strong>
+          <p>Em você</p>
+        </div>
+
 
       </div>
 
@@ -97,6 +103,8 @@ main {
 
 .profile .descr {
   width: 100%;
+  padding: 24px;
+  padding-top: 0;
 }
 
 .profile .descr h1 {
@@ -127,5 +135,28 @@ main {
   height: 20px;
   margin-right: 5px;
 }
+
+.status {
+  width: 100%;
+  height: 93px;
+  border-top: 1px solid #eef0f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+}
+
+.status strong {
+  font-size: 85%;
+  font-weight: 500;
+  color: #64707d;
+}
+
+.status p {
+  margin: 0;
+  color: rgb(8, 9, 10);
+  font-size: 16px;
+}
+
 
 </style>
