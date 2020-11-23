@@ -82,6 +82,7 @@ main {
   border-radius: 5px;
   z-index: 13;
   padding: 64px 16px 16px 16px;
+  padding-bottom: 0;
 }
 
 .profile .settings {
