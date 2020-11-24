@@ -32,11 +32,21 @@
     
       <div class="profile-down">
         <div class="user-sidebar">
-          <Widget></Widget>
-        </div>
-        <div class="posts-user"></div>
-        <div class="">c</div>
+          <Widget widgetTitle="Fandom" widgetBody="Blink"></Widget>
+          <Widget widgetTitle="Stan" widgetBody="Jennie"></Widget>
+          <Widget widgetTitle="Ultimate" widgetBody="Jennie"></Widget>
+          <Widget widgetTitle="Bias" widgetBody="Jennie"></Widget>
 
+          <div class="sidebar-data">
+            <div>6 Posts Published</div>
+            
+            <!-- <div>35 Tags Followed</div> -->
+          </div>
+        </div>
+        <div class="posts-user">
+          <Posts></Posts>
+        </div>
+        <div class=""></div>
 
       </div>
       
@@ -179,6 +189,21 @@ main {
   padding-top: 16px;
   padding-bottom: 16px;
   /* line-height: 1.35em; */
+}
+
+
+.sidebar-data {
+  border-radius: 3px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  padding: 16px;
+  color: rgb(100, 112, 125);
+  font-size: 15.3px;
+  margin-bottom: 32px;
+}
+
+.posts-user {
+  margin-left: 25px; /* pode trocar se necessario */
 }
 
 

@@ -1,16 +1,24 @@
 <template>
   <div class="widget">
     <header>
-      <h4>Fandom</h4>
+      <h4>{{ widgetTitle }}</h4>
     </header>
     <div class="widget-body">
-      <p>Blink</p>
+      <p>{{ widgetBody }}</p>
     </div>
   </div>
 
 </template>
 
-<script></script>
+<script>
+export default {
+  props: [
+    'widgetTitle',
+    'widgetBody'
+  ]
+}
+
+</script>
 
 <style scoped>
 

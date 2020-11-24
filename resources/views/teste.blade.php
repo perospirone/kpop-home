@@ -16,7 +16,7 @@
 </head>
 <body>
   <div id="app">
-    <profile-page></profile-page>
+    <profile-page a="das"></profile-page>
   </div>
 
   <script src="{{ asset('js/app.js') }}"></script>
