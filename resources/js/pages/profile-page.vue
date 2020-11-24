@@ -28,10 +28,18 @@
           <strong>Status</strong>
           <p>Em você</p>
         </div>
+      </div>
+    
+      <div class="profile-down">
+        <div class="user-sidebar">
+          <Widget></Widget>
+        </div>
+        <div class="posts-user"></div>
+        <div class="">c</div>
 
 
       </div>
-
+      
     </main>
 
   </div>
@@ -40,11 +48,13 @@
 <script>
 import Posts from '../components/Posts.vue'
 import Header from '../components/Header.vue'
+import Widget from '../components/Widget.vue'
 
 export default {
   components: {
     'Posts': Posts,
-    'Header': Header
+    'Header': Header,
+    'Widget': Widget
   }
 }
 
@@ -112,6 +122,7 @@ main {
   color: rgb(8, 9, 10);
   font-size: 2rem;
   margin-bottom: 8px;
+  font-weight: 800;
 }
 
 .profile .descr p {
@@ -157,6 +168,17 @@ main {
   margin: 0;
   color: rgb(8, 9, 10);
   font-size: 16px;
+}
+
+.profile-down {
+  width: 95%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin: 0 auto;
+  margin-top: 35px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  /* line-height: 1.35em; */
 }
 
 
