@@ -88,7 +88,7 @@ export default {
 
 </script>
 
-<style> /*
+<style scoped> /*
 .column1, .column2 {
   height: 80vh;
   background-color: white;
