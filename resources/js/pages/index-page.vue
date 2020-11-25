@@ -5,7 +5,8 @@
       <div class="column1 box">
         <div class="sidebar">
           <nav class="nav-sidebar">
-            <a href="#"><b-icon icon="terminal-fill" style="width: 20px; height: 20px; margin-right: 0.5rem;"></b-icon> Sign In/Up</a>
+            <a href="#"><v-icon name="sign"></v-icon> Sign In/Up</a>
+            
           </nav>
         </div>
       </div>
@@ -87,7 +88,9 @@ export default {
 }
 
 .nav-sidebar a svg {
-
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
 }
 
 .column2 header {
