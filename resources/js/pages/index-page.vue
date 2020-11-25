@@ -3,6 +3,11 @@
     <Header></Header>
     <main class="mainFlex maxWidth">
       <div class="column1 box">
+        <div class="sidebar">
+          <nav class="nav-sidebar">
+            <a href="#"><b-icon icon="terminal-fill" style="width: 20px; height: 20px; margin-right: 0.5rem;"></b-icon> Sign In/Up</a>
+          </nav>
+        </div>
       </div>
 
       <div class="column2 box">
@@ -60,40 +65,29 @@ export default {
   background: transparent;
 }
 
-.sidebar-profile {
+.nav-sidebar {
+  margin-bottom: 1.5rem;
+}
+
+.nav-sidebar a {
   display: flex;
-  font-size: 16px;
   align-items: center;
-  margin-bottom: 8px;
-  box-sizing: border-box;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.5rem;
   color: rgb(32, 36, 40);
-  border-radius: 3px;
-  cursor: pointer;
-  padding: 8px;
+  font-weight: 700;
 }
 
-.sidebar-profile:hover {
-  background: #E2E4E5;
+
+.nav-sidebar a:hover {
   text-decoration: none;
+  color: rgb(50, 62, 190);
+  background: rgba(0, 0, 0, 0.035);
 }
 
-.sidebar-profile div {
-  padding-left: 8px;
-  color: rgb(32, 36, 40);
-  flex-basis: auto;
-  flex-grow: 1;
-  flex-shrink: 1;
-}
+.nav-sidebar a svg {
 
-.sidebar-profile div h4 {
-  color: rgba(10, 10, 10, 0.9);
-  font-size: 16px;
-  margin: 0;
-}
-
-.sidebar-profile div small {
-  font-size: 80%;
-  color: rgb(100, 112, 125);
 }
 
 .column2 header {
@@ -106,8 +100,9 @@ export default {
 
 .column2 header h2 {
   color: rgb(8, 9, 10);
-  font-size: 18px;
+  font-size: 20px;
   margin: 0;
+  font-weight: 700;
 }
 
 .column2 header nav a {
