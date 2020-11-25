@@ -5,8 +5,7 @@
       <div class="column1 box">
         <div class="sidebar">
           <nav class="nav-sidebar">
-            <a href="#"><v-icon name="sign"></v-icon> Sign In/Up</a>
-            
+            <a href="#"><v-icon name="sign"></v-icon>Sign In/Up</a>
           </nav>
         </div>
       </div>
