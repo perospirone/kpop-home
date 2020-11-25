@@ -33,6 +33,7 @@ Vue.component('v-icon', Icon)
 Vue.component('editor', require('./components/EditorVue2.vue').default);
 
 // Pages
+Vue.component('index-page', require('./pages/index-page.vue').default);
 Vue.component('home-page', require('./pages/home-page.vue').default);
 Vue.component('write-post', require('./pages/write-post.vue').default);
 Vue.component('post-page', require('./pages/post-page.vue').default);
