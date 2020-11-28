@@ -22,7 +22,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 textarea {
   visibility: hidden;
   width: 0;

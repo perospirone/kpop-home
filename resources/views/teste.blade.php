@@ -16,7 +16,7 @@
 </head>
 <body>
   <div id="app">
-    <index-page></index-page>
+    <settings-page></settings-page>
   </div>
 
   <script src="{{ asset('js/app.js') }}"></script>

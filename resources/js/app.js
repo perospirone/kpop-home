@@ -38,6 +38,7 @@ Vue.component('home-page', require('./pages/home-page.vue').default);
 Vue.component('write-post', require('./pages/write-post.vue').default);
 Vue.component('post-page', require('./pages/post-page.vue').default);
 Vue.component('profile-page', require('./pages/profile-page.vue').default);
+Vue.component('settings-page', require('./pages/settings-page.vue').default);
 
 
 
