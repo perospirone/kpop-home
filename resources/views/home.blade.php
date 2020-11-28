@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="google-site-verification" content="M4uWyLChRqbwOOSdfmAFyCZB-JOavmSoKmoxmbt32Lg" /> 
+  <meta name="google-site-verification" content="M4uWyLChRqbwOOSdfmAFyCZB-JOavmSoKmoxmbt32Lg" />
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Kpop Home</title>
