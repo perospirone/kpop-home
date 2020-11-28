@@ -1,5 +1,5 @@
 {
-  "name": "Kpop Home",
+  "name": "kpop/home",
   "type": "project",
   "description": "Uma rede social para a comunidade brasileira de Kpop",
   "keywords": [
@@ -56,8 +56,7 @@
   "scripts": {
     "post-autoload-dump": [
       "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-      "@php artisan package:discover --ansi",
-      "php artisan storage:link"
+      "@php artisan package:discover --ansi"
     ],
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""

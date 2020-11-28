@@ -14,6 +14,7 @@ yarn-error.log
 
 public/js/app.js
 public/js/write-post.js
+public/css/app.css
 yarn.lock
 package-lock.json
 public/storage

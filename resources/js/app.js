@@ -4,9 +4,20 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
-
 window.Vue = require('vue');
+
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+Vue.use(BootstrapVue)
+Vue.use(BootstrapVueIcons)
+
+import 'vue-awesome/icons'
+
+import Icon from 'vue-awesome/components/Icon'
+
+Vue.component('v-icon', Icon)
 
 /**
  * The following block of code may be used to automatically register your
@@ -19,7 +30,17 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('editor', require('./components/EditorVue2.vue').default);
+
+// Pages
+Vue.component('index-page', require('./pages/index-page.vue').default);
+Vue.component('home-page', require('./pages/home-page.vue').default);
+Vue.component('write-post', require('./pages/write-post.vue').default);
+Vue.component('post-page', require('./pages/post-page.vue').default);
+Vue.component('profile-page', require('./pages/profile-page.vue').default);
+Vue.component('settings-page', require('./pages/settings-page.vue').default);
+
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
