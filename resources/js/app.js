@@ -5,6 +5,9 @@
  */
 
 window.Vue = require('vue');
+import { App, plugin } from '@inertiajs/inertia-vue'
+
+Vue.use(plugin)
 
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -48,6 +51,13 @@ Vue.component('settings-page', require('./pages/settings-page.vue').default);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-  el: '#app',
-});
+const el = document.getElementById('app')
+
+new Vue({
+  render: h => h(App, {
+    props: {
+      initialPage: JSON.parse(el.dataset.page),
+      resolveComponent: name => import(`./pages/${name}`).then(module => module.default),
+    },
+  }),
+}).$mount(el)

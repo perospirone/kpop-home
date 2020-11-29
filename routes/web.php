@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'IndexController@index');
 
 Auth::routes();
 
@@ -38,6 +38,4 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name
 
 // rotas teste
 
-Route::get('/teste', function () {
-  return view('teste');
-});
+Route::get('/teste', 'TesteController@teste');

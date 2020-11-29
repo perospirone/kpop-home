@@ -2,22 +2,22 @@
   <div class="post">
     <div class="details-post">
       <div class="autor-post">
-        <a href="#" class="name">Daniel de Sá</a>
+        <a :href="link_name" class="name">{{ name_author }}</a>
         <br>
-        <a href="#" class="date">22/10/2020 22:28:56</a>
+        <a href="#" class="date">{{ date }}</a>
       </div>
       <div class="title-post">
         <h2>
-          <a href="#">
-           das 
+          <a :href="link_post">
+            {{ title }}
           </a>
         </h2>
 
         <div class="reactions">
           <div class="react">
-            <a class="like" onclick="handleLike(1, 4)">
+            <a class="like">
               <b-icon icon="heart-fill" style="width: 14px; height: 14px; margin-right: 6px"></b-icon>
-              <span>1</span> likes
+              <span>{{ likes }}</span> likes
             </a>
           </div>
           <div class="react2"></div>
@@ -28,6 +28,25 @@
 </template>
 
 <script>
+export default {
+  props: {
+    id: Number,
+    name_author: String,
+    username_author: String,
+    date: String,
+    title: String,
+    likes: Number,
+    like: Boolean,
+    content: String,
+  },
+  data() {
+    return {
+      link_name: `/profile/${this.username_author}`,
+      link_post: `/post/${this.id}`
+    }
+  }
+}
+
 </script>
 
 <style scoped>

@@ -2,7 +2,7 @@
   <header>
     <div class="topBarContainer maxWidth">
       <div class="flexDiv">
-        <a class="logo" href="#">
+        <a class="logo" href="/">
           <img src="https://res.cloudinary.com/difh39tam/image/upload/v1603493966/lehn5xc5gpcwko8rjndt.png">
         </a>
 
@@ -14,11 +14,11 @@
       </div>
 
       <div class="topRight">
-        <a href="#" class="writePost logIn">
+        <a href="/login" class="writePost logIn">
           <b-button variant="light">Log in</b-button> 
         </a>
 
-        <a href="#" class="writePost">
+        <a href="/register" class="writePost">
           <b-button variant="primary">Create Account</b-button> 
         </a>
       </div>

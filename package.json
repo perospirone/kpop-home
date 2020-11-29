@@ -18,13 +18,17 @@
         "laravel-mix": "^5.0.5",
         "lodash": "^4.17.20",
         "popper.js": "^1.12",
-        "resolve-url-loader": "^2.3.1",
+        "resolve-url-loader": "^3.1.2",
         "sass": "^1.20.1",
         "sass-loader": "^8.0.0",
         "vue": "^2.5.17",
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+        "@inertiajs/inertia": "^0.6.3",
+        "@inertiajs/inertia-vue": "^0.4.2",
+        "@inertiajs/progress": "^0.2.2",
         "bootstrap-vue": "^2.18.1",
         "vue-awesome": "^4.1.0",
         "vue2-editor": "^2.10.2"

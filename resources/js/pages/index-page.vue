@@ -5,7 +5,7 @@
       <div class="column1 box">
         <div class="sidebar">
           <nav class="nav-sidebar">
-            <a href="#"><v-icon name="sign"></v-icon>Sign In/Up</a>
+            <a href="/login"><v-icon name="sign"></v-icon>Sign In/Up</a>
           </nav>
         </div>
       </div>
@@ -24,7 +24,7 @@
           </nav>
         </header>
 
-        <Posts></Posts>
+        <Posts :posts="posts"></Posts>
       </div>
 
       <div class="column3 box"></div>
@@ -40,6 +40,10 @@ export default {
   components: {
     'Header': Header,
     'Posts': Posts
+  },
+
+  props: {
+    posts: Array,
   }
 };
 
