@@ -6,6 +6,10 @@
 
 window.Vue = require('vue');
 
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -33,21 +37,23 @@ Vue.component('v-icon', Icon)
 Vue.component('editor', require('./components/EditorVue2.vue').default);
 
 // Pages
-Vue.component('index-page', require('./pages/index-page.vue').default);
-Vue.component('home-page', require('./pages/home-page.vue').default);
-Vue.component('write-post', require('./pages/write-post.vue').default);
-Vue.component('post-page', require('./pages/post-page.vue').default);
-Vue.component('profile-page', require('./pages/profile-page.vue').default);
-Vue.component('settings-page', require('./pages/settings-page.vue').default);
+let indexPage = Vue.component('index-page', require('./pages/index-page.vue').default);
+let homePage  = Vue.component('home-page', require('./pages/home-page.vue').default);
+let writePost = Vue.component('write-post', require('./pages/write-post.vue').default);
+let postPage  = Vue.component('post-page', require('./pages/post-page.vue').default);
+let profilePage = Vue.component('profile-page', require('./pages/profile-page.vue').default);
+let settingsPage = Vue.component('settings-page', require('./pages/settings-page.vue').default);
 
 
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+import router from './routes'
 
 const app = new Vue({
+  router
+}).$mount('#app')
+
+// Now the app has started!
+
+/*
+const app = new Vue({
   el: '#app',
-});
+});*/

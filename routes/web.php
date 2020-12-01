@@ -11,8 +11,9 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
+/*
 Route::get('/', 'HomeController@index');
 
 Auth::routes();
@@ -35,9 +36,15 @@ Route::get('/settings', 'SettingsController@index')->name('settings');
 Route::put('/settings', 'SettingsController@update')->name('settings.update');
 
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
-
+*/
 // rotas teste
 
+
+Route::get('/{vue?}', function () {
+  return view('app');
+})->where('vue', '[\/\w\.-]*')->name('home');
+
+/*
 Route::get('/teste', function () {
   return view('teste');
-});
+});*/
